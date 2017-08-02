@@ -1,0 +1,112 @@
+.page--intro {
+    padding: 10px 80px 40px 80px;
+    font-size: 0;
+    text-align: center;
+    background: url('../img/bg/intro_bg.jpg') no-repeat;
+    background-size:cover;
+}
+
+.intro-top {
+    margin-bottom: 10vh;
+    vertical-align: top;
+    text-align: justify;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+.intro-top__logo {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.intro-top__list {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+
+    &:before {
+        content: "";
+        margin: auto 0;
+    }
+}
+
+.intro-top__item {
+    display: inline-block;
+    margin-left: 16px;
+    font-family: 'Conv_Ubuntu-Medium';
+    font-size: 13px;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin-left: 16px;
+        margin-top: -3px; 
+        vertical-align: middle;
+        border-radius: 50%;
+        background-color: white;
+    }
+    
+    &:last-child {
+        padding: 13px 16px;
+        border-radius: 5px;
+        background-color: #e45028;
+    }
+
+    &:nth-last-child(1):after,
+    &:nth-last-child(2):after {
+        display: none;
+    }
+
+}
+
+.intro-middle__img {
+    display: inline-block;
+    margin-right: 5vw;
+    vertical-align: top;
+    // &:before {
+    //     content: "";
+    //     position: absolute;
+    //     width: 300px;
+    //     height: 300px;
+    //     background: url('../img/icon/drops.svg') no-repeat;
+    // }       
+}
+
+.intro-middle__text {
+    display: inline-block;
+    margin: 150px 0 0 5vw;
+    vertical-align: top;
+    text-align: left;
+}
+
+
+.title-page--intro {
+    display: block;
+    margin: 0 0 10px 0;
+    color: #f9b43b;
+}
+
+.intro-middle__text-bottom {
+    display: block;
+    margin-bottom: -10px;
+    font-family: 'Conv_Lifehack Medium';
+    font-size: 65px;
+    color: white;
+}
+
+.intro-bottom {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    cursor: pointer;
+}
