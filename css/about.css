@@ -1,16 +1,25 @@
-.page--about {
+.about {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
   padding: 75px 80px 75px 80px;
   font-size: 0;
-  text-align: center;
   background: url("../img/bg/about_bg.jpg") no-repeat;
   background-size: cover; }
 
-.title-page--about {
-  display: block;
+.title-section--black {
+  line-height: 80px;
   color: #2f3234;
-  margin: 0 0 90px 0; }
+  margin: 0 0 0 0; }
 
-.about-article {
+.about__list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start; }
+
+.about__item {
   display: inline-block;
   width: 290px;
   margin: 0 10px;
@@ -38,5 +47,9 @@
   font-size: 14px;
   line-height: 1.5;
   color: #676667; }
+
+.about__empty {
+  display: block;
+  height: 80px; }
 
 /*# sourceMappingURL=about.css.map */
