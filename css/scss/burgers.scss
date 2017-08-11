@@ -1,0 +1,204 @@
+.burgers {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    background: -webkit-linear-gradient(#f9b43b 0%, #f9b43b 15%, #eb8d38 48%, #f9b43b 85%, #f9b43b 100%);
+    background: -moz-linear-gradient(#f9b43b 0%, #f9b43b 15%, #eb8d38 48%, #f9b43b 85%, #f9b43b 100%);
+    background: -o-linear-gradient(#f9b43b 0%, #f9b43b 15%, #eb8d38 48%, #f9b43b 85%, #f9b43b 100%);
+    background: linear-gradient(#f9b43b 0%, #f9b43b 15%, #eb8d38 48%, #f9b43b 85%, #f9b43b 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.arrow-scroll {
+    margin: 300px 0 0 0;
+}
+
+.arrow-scroll--rotate-minus90 {
+    padding: 0 0 0 10px;
+    transform: rotate(-90deg);
+}
+
+.arrow-scroll--rotate-plus90 {
+    padding: 0 10px 0 0;
+    transform: rotate(90deg);
+}
+
+.arrow-scroll__icon {
+    width: 29px;
+    height: 14px;
+    fill: white;
+}
+
+.burgers__wrapper {
+    position: relative;
+    width: 940px;
+}
+
+.slider {
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.conposition-menu {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 3px;
+    background-color: #e35028;
+    fill: white;
+}
+
+.conposition-menu__icon {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 3px;
+}
+
+.conposition-menu__name {
+    flex-shrink: 0;
+    font-family: 'Conv_Gagalin-Regular';
+    font-size: 14px;
+    line-height: 1.5;
+    color: white;
+}
+
+.conposition-desc {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    left: 90px;
+    padding: 18px 20px;
+    border-radius: 3px;
+    background-color: rgba(white, .9)
+}
+
+.conposition-desc__item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.conposition-desc__img {
+    width: 44px;
+    height: 40px;
+    margin: 0 20px 0 0;
+}
+
+.conposition-desc__img--red {
+    fill: #e25028;
+}
+
+.conposition-desc__img--yellow {
+    fill: #f8b43a;
+}
+
+.conposition-desc__img--green {
+    fill: #8ac03e;
+}
+
+.conposition-desc__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+}
+
+.conposition-desc__name {
+    font-family: 'Conv_Ubuntu-Regular';
+    font-size: 14px;
+    // line-height: 1.5;
+    color: #464848;
+}
+
+.conposition-desc__number {
+    font-family: 'Conv_Ubuntu-Light';
+    font-size: 14px;
+    // line-height: 1.5;
+    color: #464848;
+}
+
+.slider__kkal {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: -90px;
+    width: 90px;
+    height: 90px;
+}
+
+.slider__kkal-icon {
+    width: 60px;
+    height: 60px;
+    fill: white;
+}
+
+.slider__kkal-number {
+    position: absolute;
+    top: 24px;
+    font-family: 'Conv_Gagalin-Regular';
+    font-size: 20px;
+    line-height: 1.5;
+    color: white;
+}
+
+.slider__kkal-name {
+    font-family: 'Conv_Gagalin-Regular';
+    font-size: 14px;
+    line-height: 1.5;
+    color: white;
+}
+
+.slider__left {
+    width: 500px;
+    height: 350px;
+    margin: 70px 20px 0 0;
+}
+
+.slider__right {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.slider__desc {
+    margin: 30px 0 0 0;
+    font-family: 'Conv_Ubuntu-Light';
+    font-size: 14px;
+    line-height: 1.8rem;
+    color: white;
+}
+
+.slider__order {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+}
+
+.slider__price-big {
+    margin-right: 10px;
+    font-family: 'Conv_Gagalin-Regular';
+    font-size: 72px;
+    line-height: 1.5;
+    color: #e35028;
+}
+
+.slider__price-small {
+    margin-right: 30px;
+    font-family: 'Conv_Gagalin-Regular';
+    font-size: 30px;
+    line-height: 1.5;
+    color: #e35028;
+}
