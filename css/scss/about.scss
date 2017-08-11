@@ -1,0 +1,106 @@
+.about {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 75px 80px 75px 80px;
+    background: url('../img/bg/about_bg.jpg') no-repeat;
+    background-size: cover;
+    @include phone {
+        justify-content: flex-start;
+        padding: 45px 5px 5px 5px;
+    }
+}
+
+.title-section--black {
+    margin: 0 0 0 0;
+    text-align: center;
+    line-height: 80px;
+    color: #2f3234;
+}
+
+.about__list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 80px;
+    @include phone {
+        flex-flow: column nowrap;
+        margin-top: 45px;
+        padding-bottom: 10px;
+    }
+}
+
+.about__item {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 290px;
+    margin: 0 10px;
+    padding: 0 10px 0 10px;
+    @include phone {
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+.about-article__icon {
+    flex-shrink: 0;
+}
+
+.about-article__icon--meat {
+    width: 96px;
+    height: 89px;
+    margin: 0 0 10px 0;
+    fill: #e2522a;
+    @include phone {
+        margin: 0 10px 0 0;
+    }
+}
+
+.about-article__icon--hand {
+    width: 73px;
+    height: 86px;
+    margin-bottom: 13px;
+    fill: #f8b43a;
+    @include phone {
+        margin: 0 33px 0 0;
+    }
+}
+
+.about-article__icon--natural {
+    width: 88px;
+    height: 76px;
+    margin-bottom: 23px;
+    fill: #8ac03e;
+    @include phone {
+        margin: 0 18px 0 0;
+    }
+}
+
+.about-article__title {
+    text-align: center;
+    font-family: 'Conv_Lifehack Medium';
+    font-size: 21px;
+    font-weight: lighter;
+    line-height: 1.5;
+    color: #2f3234;
+    @include phone {
+        text-align: left;
+    }
+}
+
+.about-article__text {
+    text-align: center;
+    font-family: 'Conv_Ubuntu-Light';
+    font-size: 14px;
+    line-height: 1.5;
+    color: #676667;
+    @include phone {
+        text-align: left;
+    }
+}
