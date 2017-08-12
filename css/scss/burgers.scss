@@ -163,6 +163,7 @@
 }
 
 .slider__left {
+    flex-shrink: 0;
     width: 500px;
     height: 350px;
     margin: 70px 20px 0 0;

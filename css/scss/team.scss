@@ -52,11 +52,11 @@
 
 .team-list__decs {
     margin-top: 16px;
-    display: none;
+    display: flex;
     flex-flow: row nowrap;
-    .team-list__link--show>& {
-        display: flex;
-    }
+    // .team-list__link--show>& {
+    //     display: flex;
+    // }
 }
 
 .team-list__photo {
