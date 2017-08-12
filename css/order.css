@@ -203,4 +203,29 @@
 .form-order__submit-text:hover {
   color: white; }
 
+.popup-order-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: -90px 0 0 0; }
+
+.popup-order {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
+.popup-order__name {
+  font-family: 'Conv_Ubuntu-Light';
+  font-size: 14px;
+  font-weight: lighter;
+  color: black; }
+
 /*# sourceMappingURL=order.css.map */
