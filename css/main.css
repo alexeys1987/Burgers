@@ -117,15 +117,21 @@ a:hover {
   padding: 0 80px 0 80px;
   background: url("../img/bg/intro_bg.jpg") no-repeat;
   background-size: cover; }
+  @media screen and (max-width: 768px) {
+    .intro {
+      padding: 5px 25px; } }
 
 .intro__wrapper {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: space-between;
   position: relative;
-  max-width: 940px;
+  min-width: 750px;
   height: 100vh;
   min-height: 650px; }
+  @media screen and (max-width: 768px) {
+    .intro__wrapper {
+      width: 100%; } }
 
 .intro-top {
   display: flex;
@@ -136,6 +142,10 @@ a:hover {
   font-size: 13px;
   text-transform: uppercase;
   color: white; }
+
+.intro-top__left {
+  z-index: 200;
+  position: relative; }
 
 .intro-top__logo-link {
   display: flex;
@@ -186,14 +196,87 @@ a:hover {
 .buttom-order--margin {
   margin-left: 16px; }
 
+.intro-top__menu-mobile {
+  z-index: 200;
+  display: none;
+  position: relative;
+  margin: 0 0 0 30px;
+  padding: 1px 1px 1px 1px; }
+  @media screen and (max-width: 768px) {
+    .intro-top__menu-mobile {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center; } }
+
+.intro-top__menu-mobile-line {
+  width: 24px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: white;
+  margin: 0 0 5px 0; }
+  .intro-top__menu-mobile-line:last-child {
+    margin: 0 0 0 0; }
+
+.intro-top__menu-mobile--popup > .intro-top__menu-mobile-line:nth-child(1) {
+  transform: rotate(-45deg) translate(-35%, 220%);
+  transform-origin: 0 0;
+  background-color: #c1c2c2; }
+.intro-top__menu-mobile--popup > .intro-top__menu-mobile-line:nth-child(2) {
+  display: none; }
+.intro-top__menu-mobile--popup > .intro-top__menu-mobile-line:nth-child(3) {
+  transform: rotate(45deg) translate(-30%, -300%);
+  transform-origin: 0 0;
+  background-color: #c1c2c2; }
+
+.intro-top__menu-list--popup {
+  z-index: 100;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #2f3234; }
+  .intro-top__menu-list--popup > .intro-top__menu-item {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center; }
+    .intro-top__menu-list--popup > .intro-top__menu-item:after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      margin: 0;
+      vertical-align: middle;
+      border-radius: 50%;
+      background-color: white; }
+    .intro-top__menu-list--popup > .intro-top__menu-item:last-child:after {
+      content: "";
+      display: none; }
+    .intro-top__menu-list--popup > .intro-top__menu-item > .intro-top__menu-link {
+      margin: 26px 0;
+      font-family: 'Conv_Ubuntu-Regular';
+      font-size: 24px;
+      text-transform: uppercase;
+      color: white; }
+
 .intro-middle {
   display: flex;
   justify-content: center;
   padding-bottom: 10vh; }
+  @media screen and (max-width: 768px) {
+    .intro-middle {
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      padding-bottom: 1vh; } }
 
-.intro-middle__img {
-  width: 454px;
-  height: 420px; }
+@media screen and (max-width: 768px) {
+  .intro-middle__img {
+    width: 40vh; } }
 
 .intro-middle__text {
   display: flex;
@@ -202,6 +285,10 @@ a:hover {
   margin: 100px 0 0 5vw;
   vertical-align: top;
   text-align: left; }
+  @media screen and (max-width: 768px) {
+    .intro-middle__text {
+      margin: 5vh 0 0 0;
+      text-align: center; } }
 
 .title-section--orange {
   margin: 0 0 10px 0;
@@ -353,16 +440,15 @@ a:hover {
 
 .burgers__wrapper {
   position: relative;
-  width: 940px; }
-
-.slider {
-  display: flex;
-  flex-flow: row nowrap;
-  position: relative;
-  width: 100%;
-  margin-top: 100px; }
+  width: 940px;
+  height: 100vh;
+  padding: 100px 0; }
+  @media screen and (max-width: 768px) {
+    .burgers__wrapper {
+      width: 550px; } }
 
 .conposition-menu {
+  z-index: 100;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -370,6 +456,7 @@ a:hover {
   position: absolute;
   width: 90px;
   height: 90px;
+  margin: 100px 0 0 0;
   border-radius: 3px;
   background-color: #e35028;
   fill: white; }
@@ -387,12 +474,14 @@ a:hover {
   color: white; }
 
 .conposition-desc {
+  z-index: 100;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   position: absolute;
   left: 90px;
+  margin: 100px 0 0 0;
   padding: 18px 20px;
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.9); }
@@ -442,6 +531,10 @@ a:hover {
   bottom: -90px;
   width: 90px;
   height: 90px; }
+  @media screen and (max-width: 768px) {
+    .slider__kkal {
+      left: 90%;
+      top: 90px; } }
 
 .slider__kkal-icon {
   width: 60px;
@@ -462,7 +555,19 @@ a:hover {
   line-height: 1.5;
   color: white; }
 
+.slider {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  width: 100%;
+  height: 100%; }
+  @media screen and (max-width: 768px) {
+    .slider {
+      flex-direction: column;
+      align-items: center; } }
+
 .slider__left {
+  flex-shrink: 1;
   width: 500px;
   height: 350px;
   margin: 70px 20px 0 0; }
@@ -543,10 +648,8 @@ a:hover {
 
 .team-list__decs {
   margin-top: 16px;
-  display: none;
+  display: flex;
   flex-flow: row nowrap; }
-  .team-list__link--show > .team-list__decs {
-    display: flex; }
 
 .team-list__photo {
   flex-shrink: 0;
@@ -590,28 +693,36 @@ a:hover {
   align-items: stretch;
   position: relative; }
 
-.menu-acco__link--meat {
-  background: url("../img/menu/acco_meat.jpg") no-repeat;
-  background-position: 70% 0%; }
-
-.menu-acco__link--vegetarian {
-  background: url("../img/menu/acco_vegetarian.jpg") no-repeat;
-  background-position: 40% 0%; }
-
-.menu-acco__link--diet {
-  background: url("../img/menu/acco_diet.jpg") no-repeat;
-  background-position: 60% 0%; }
-
 .menu-acco__link {
+  display: flex;
+  flex-flow: row nowrap;
+  text-justify: flex-start;
+  align-items: stretch;
   position: relative;
-  width: 80px;
   background-size: cover; }
   .menu-acco__link:before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); }
+    background: rgba(0, 0, 0, 0.3); }
+
+.menu-acco__header-wrapper {
+  position: relative;
+  width: 80px;
+  height: 100%; }
+
+.menu-acco__header-wrapper--meat {
+  background: url("../img/menu/acco_meat1.jpg") no-repeat;
+  background-size: cover; }
+
+.menu-acco__header-wrapper--vegetarian {
+  background: url("../img/menu/acco_vegetarian1.jpg") no-repeat;
+  background-size: cover; }
+
+.menu-acco__header-wrapper--diet {
+  background: url("../img/menu/acco_diet1.jpg") no-repeat;
+  background-size: cover; }
 
 .menu-acco__header {
   position: absolute;
@@ -625,6 +736,32 @@ a:hover {
   color: white;
   transform: rotate(-90deg) translate(-50%, -50%);
   transform-origin: 0 0; }
+
+.menu-acco__desc-wrapper {
+  position: relative;
+  width: 0;
+  height: 100%;
+  background: rgba(61, 64, 65, 0.93);
+  overflow: hidden;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out; }
+
+.menu-acco__desc-wrapper--show {
+  width: 540px; }
+
+.menu-acco__desc {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 540px;
+  height: 100%;
+  padding: 58px 32px;
+  font-family: 'Conv_Ubuntu-Light';
+  font-size: 14px;
+  line-height: 20px;
+  color: white; }
 
 .feeds__list {
   font-size: 0; }
@@ -941,6 +1078,31 @@ a:hover {
 .form-order__submit-text:visited,
 .form-order__submit-text:hover {
   color: white; }
+
+.popup-order-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: -90px 0 0 0; }
+
+.popup-order {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
+.popup-order__name {
+  font-family: 'Conv_Ubuntu-Light';
+  font-size: 14px;
+  font-weight: lighter;
+  color: black; }
 
 .contact {
   display: flex;

@@ -23,32 +23,41 @@
     position: relative;
 }
 
-.menu-acco__link--meat {
-    background: url('../img/menu/acco_meat.jpg') no-repeat;
-    background-position: 70% 0%;
-}
-
-.menu-acco__link--vegetarian {
-    background: url('../img/menu/acco_vegetarian.jpg') no-repeat;
-    background-position: 40% 0%;
-}
-
-.menu-acco__link--diet {
-    background: url('../img/menu/acco_diet.jpg') no-repeat;
-    background-position: 60% 0%;
-}
-
 .menu-acco__link {
+    display: flex;
+    flex-flow: row nowrap;
+    text-justify: flex-start;
+    align-items: stretch;
     position: relative;
-    width: 80px;
     background-size: cover;
     &:before {
         content: "";
         position: absolute;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, .5);
+        background: rgba(0, 0, 0, .3);
     }
+}
+
+.menu-acco__header-wrapper {
+    position: relative;
+    width: 80px;
+    height: 100%;
+}
+
+.menu-acco__header-wrapper--meat {
+    background: url('../img/menu/acco_meat1.jpg') no-repeat;
+    background-size: cover;
+}
+
+.menu-acco__header-wrapper--vegetarian {
+    background: url('../img/menu/acco_vegetarian1.jpg') no-repeat;
+    background-size: cover;
+}
+
+.menu-acco__header-wrapper--diet {
+    background: url('../img/menu/acco_diet1.jpg') no-repeat;
+    background-size: cover;
 }
 
 .menu-acco__header {
@@ -63,4 +72,33 @@
     color: white;
     transform: rotate(-90deg) translate(-50%, -50%);
     transform-origin: 0 0;
+}
+
+.menu-acco__desc-wrapper {
+    position: relative;
+    width: 0;
+    height: 100%;
+    background: rgba(#3d4041, .93);
+    overflow: hidden;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.menu-acco__desc-wrapper--show {
+    width: 540px;
+}
+
+.menu-acco__desc {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 540px;
+    height: 100%;
+    padding: 58px 32px;
+    font-family: 'Conv_Ubuntu-Light';
+    font-size: 14px;
+    line-height: 20px;
+    color: white;
 }
