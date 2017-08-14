@@ -9,10 +9,10 @@
 
 .intro__wrapper {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: space-between;
     position: relative;
-    max-width: 940px;
+    min-width: 750px;
     height: 100vh;
     min-height: 650px;
     @include tablet {
@@ -180,11 +180,18 @@
     display: flex;
     justify-content: center;
     padding-bottom: 10vh;
+    @include tablet {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 1vh;
+    }
 }
 
 .intro-middle__img {
-    width: 454px;
-    height: 420px;
+    @include tablet {
+        width: 40vh;
+    }
 }
 
 .intro-middle__text {
@@ -194,6 +201,10 @@
     margin: 100px 0 0 5vw;
     vertical-align: top;
     text-align: left;
+    @include tablet {
+        margin: 5vh 0 0 0;
+        text-align: center;
+    }
 }
 
 .title-section--orange {

@@ -58,7 +58,7 @@ a:hover {
   right: 20px;
   top: 90px;
   z-index: 100; }
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 768px) {
     .menu-radio-fixed {
       display: none; } }
   @media screen and (max-width: 480px) {
@@ -117,19 +117,19 @@ a:hover {
   padding: 0 80px 0 80px;
   background: url("../img/bg/intro_bg.jpg") no-repeat;
   background-size: cover; }
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 768px) {
     .intro {
       padding: 5px 25px; } }
 
 .intro__wrapper {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: space-between;
   position: relative;
-  max-width: 940px;
+  min-width: 750px;
   height: 100vh;
   min-height: 650px; }
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 768px) {
     .intro__wrapper {
       width: 100%; } }
 
@@ -161,7 +161,7 @@ a:hover {
 .intro-top__menu-list {
   display: flex;
   align-items: center; }
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 768px) {
     .intro-top__menu-list {
       display: none; } }
 
@@ -202,7 +202,7 @@ a:hover {
   position: relative;
   margin: 0 0 0 30px;
   padding: 1px 1px 1px 1px; }
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 768px) {
     .intro-top__menu-mobile {
       display: flex;
       flex-flow: column nowrap;
@@ -267,10 +267,16 @@ a:hover {
   display: flex;
   justify-content: center;
   padding-bottom: 10vh; }
+  @media screen and (max-width: 768px) {
+    .intro-middle {
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      padding-bottom: 1vh; } }
 
-.intro-middle__img {
-  width: 454px;
-  height: 420px; }
+@media screen and (max-width: 768px) {
+  .intro-middle__img {
+    width: 40vh; } }
 
 .intro-middle__text {
   display: flex;
@@ -279,6 +285,10 @@ a:hover {
   margin: 100px 0 0 5vw;
   vertical-align: top;
   text-align: left; }
+  @media screen and (max-width: 768px) {
+    .intro-middle__text {
+      margin: 5vh 0 0 0;
+      text-align: center; } }
 
 .title-section--orange {
   margin: 0 0 10px 0;
@@ -430,16 +440,15 @@ a:hover {
 
 .burgers__wrapper {
   position: relative;
-  width: 940px; }
-
-.slider {
-  display: flex;
-  flex-flow: row nowrap;
-  position: relative;
-  width: 100%;
-  margin-top: 100px; }
+  width: 940px;
+  height: 100vh;
+  padding: 100px 0; }
+  @media screen and (max-width: 768px) {
+    .burgers__wrapper {
+      width: 550px; } }
 
 .conposition-menu {
+  z-index: 100;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -447,6 +456,7 @@ a:hover {
   position: absolute;
   width: 90px;
   height: 90px;
+  margin: 100px 0 0 0;
   border-radius: 3px;
   background-color: #e35028;
   fill: white; }
@@ -464,12 +474,14 @@ a:hover {
   color: white; }
 
 .conposition-desc {
+  z-index: 100;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   position: absolute;
   left: 90px;
+  margin: 100px 0 0 0;
   padding: 18px 20px;
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.9); }
@@ -519,6 +531,10 @@ a:hover {
   bottom: -90px;
   width: 90px;
   height: 90px; }
+  @media screen and (max-width: 768px) {
+    .slider__kkal {
+      left: 90%;
+      top: 90px; } }
 
 .slider__kkal-icon {
   width: 60px;
@@ -539,8 +555,19 @@ a:hover {
   line-height: 1.5;
   color: white; }
 
+.slider {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  width: 100%;
+  height: 100%; }
+  @media screen and (max-width: 768px) {
+    .slider {
+      flex-direction: column;
+      align-items: center; } }
+
 .slider__left {
-  flex-shrink: 0;
+  flex-shrink: 1;
   width: 500px;
   height: 350px;
   margin: 70px 20px 0 0; }

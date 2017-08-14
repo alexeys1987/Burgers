@@ -34,17 +34,15 @@
 .burgers__wrapper {
     position: relative;
     width: 940px;
-}
-
-.slider {
-    display: flex;
-    flex-flow: row nowrap;
-    position: relative;
-    width: 100%;
-    margin-top: 100px;
+    height: 100vh;
+    padding: 100px 0;
+    @include tablet {
+        width: 550px;
+    }
 }
 
 .conposition-menu {
+    z-index: 100;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -52,6 +50,7 @@
     position: absolute;
     width: 90px;
     height: 90px;
+    margin: 100px 0 0 0;
     border-radius: 3px;
     background-color: #e35028;
     fill: white;
@@ -72,12 +71,14 @@
 }
 
 .conposition-desc {
+    z-index: 100;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
     position: absolute;
     left: 90px;
+    margin: 100px 0 0 0;
     padding: 18px 20px;
     border-radius: 3px;
     background-color: rgba(white, .9)
@@ -138,6 +139,10 @@
     bottom: -90px;
     width: 90px;
     height: 90px;
+    @include tablet {
+        left: 90%;
+        top: 90px;
+    }
 }
 
 .slider__kkal-icon {
@@ -162,8 +167,20 @@
     color: white;
 }
 
+.slider {
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .slider__left {
-    flex-shrink: 0;
+    flex-shrink: 1;
     width: 500px;
     height: 350px;
     margin: 70px 20px 0 0;
