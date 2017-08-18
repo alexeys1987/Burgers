@@ -84,14 +84,14 @@ a:hover {
     position: relative;
     width: 16px;
     height: 16px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     border-radius: 50%;
     cursor: pointer;
     &:before {
         content: "";
         position: absolute;
-        left: 5px;
-        top: 5px;
+        left: 3px;
+        top: 3px;
         width: 6px;
         height: 6px;
         border-radius: 50%;
@@ -102,16 +102,16 @@ a:hover {
         position: absolute;
         left: -2px;
         top: -2px;
-        width: 16px;
-        height: 16px;
-        border: 2px solid white;
+        width: 14px;
+        height: 14px;
+        border: 1px solid white;
         border-radius: 50%;
     }
 }
 
 .buttom-order {
     display: flex;
-    padding: 13px 16px;
+    padding: 11px 15px;
     border-radius: 5px;
     background-color: #e45028;
     font-family: 'Conv_Ubuntu-Medium';

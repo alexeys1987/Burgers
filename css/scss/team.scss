@@ -9,7 +9,7 @@
     display: flex;
     flex-flow: column nowrap;
     width: 48%;
-    padding: 85px 15% 0 80px;
+    padding: 70px 15% 0 65px;
     background: rgba(#2f3234, .95);
 }
 
@@ -19,11 +19,15 @@
     flex: 0 0 auto;
     position: relative;
     padding-left: 17px;
-    margin-bottom: 35px;
+    margin-bottom: 34px;
     &:nth-child(2) {
-        margin-top: 80px;
+        margin-top: 77px;
     }
     color: white;
+}
+
+.team-list__link--show {
+    margin-bottom: 40px;
 }
 
 .team-list__name {
@@ -51,19 +55,19 @@
 }
 
 .team-list__decs {
-    margin-top: 16px;
-    display: none;
+    margin-top: 13px;
+    display: flex;
     flex-flow: row nowrap;
-    .team-list__link--show>& {
-        display: flex;
-    }
+    // .team-list__link--show>& {
+    //     display: flex;
+    // }
 }
 
 .team-list__photo {
     flex-shrink: 0;
     width: 100px;
     height: 100px;
-    margin-right: 20px;
+    margin-right: 22px;
     border-radius: 50%;
     background: url('../img/team/name_photo.jpg') center center no-repeat;
 }
@@ -74,12 +78,14 @@
 }
 
 .team-list__prof {
-    margin-bottom: 18px;
+    margin-bottom: 15px;
     font-family: 'Conv_Ubuntu-Regular';
     font-size: 14px;
 }
 
 .team-list__prof-desc {
+    width: 240px;
     font-family: 'Conv_Ubuntu-Light';
     font-size: 14px;
+    line-height: 1.5rem;
 }

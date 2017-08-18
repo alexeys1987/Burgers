@@ -1,175 +1,72 @@
-.burgers {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: flex-start;
-  background: -webkit-linear-gradient(#f9b43b 0%, #f9b43b 15%, #eb8d38 48%, #f9b43b 85%, #f9b43b 100%);
-  background: -moz-linear-gradient(#f9b43b 0%, #f9b43b 15%, #eb8d38 48%, #f9b43b 85%, #f9b43b 100%);
-  background: -o-linear-gradient(#f9b43b 0%, #f9b43b 15%, #eb8d38 48%, #f9b43b 85%, #f9b43b 100%);
-  background: linear-gradient(#f9b43b 0%, #f9b43b 15%, #eb8d38 48%, #f9b43b 85%, #f9b43b 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+/*
+Error: Undefined mixin 'tablet'.
+        on line 39 of css/scss/burgers.scss, in `tablet'
+        from line 39 of css/scss/burgers.scss
 
-.arrow-scroll {
-  margin: 300px 0 0 0; }
+34: .burgers__wrapper {
+35:     position: relative;
+36:     width: 940px;
+37:     height: 100vh;
+38:     padding: 80px 0;
+39:     @include tablet {
+40:         width: 550px;
+41:     }
+42: }
+43: 
+44: .conposition-menu {
 
-.arrow-scroll--rotate-minus90 {
-  padding: 0 0 0 10px;
-  transform: rotate(-90deg); }
-
-.arrow-scroll--rotate-plus90 {
-  padding: 0 10px 0 0;
-  transform: rotate(90deg); }
-
-.arrow-scroll__icon {
-  width: 29px;
-  height: 14px;
-  fill: white; }
-
-.burgers__wrapper {
-  position: relative;
-  width: 940px; }
-
-.slider {
-  display: flex;
-  flex-flow: row nowrap;
-  position: relative;
-  width: 100%;
-  margin-top: 100px; }
-
-.conposition-menu {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  border-radius: 3px;
-  background-color: #e35028;
-  fill: white; }
-
-.conposition-menu__icon {
-  width: 46px;
-  height: 46px;
-  margin-bottom: 3px; }
-
-.conposition-menu__name {
-  flex-shrink: 0;
-  font-family: 'Conv_Gagalin-Regular';
-  font-size: 14px;
-  line-height: 1.5;
-  color: white; }
-
-.conposition-desc {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position: absolute;
-  left: 90px;
-  padding: 18px 20px;
-  border-radius: 3px;
-  background-color: rgba(255, 255, 255, 0.9); }
-
-.conposition-desc__item {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 15px; }
-
-.conposition-desc__img {
-  width: 44px;
-  height: 40px;
-  margin: 0 20px 0 0; }
-
-.conposition-desc__img--red {
-  fill: #e25028; }
-
-.conposition-desc__img--yellow {
-  fill: #f8b43a; }
-
-.conposition-desc__img--green {
-  fill: #8ac03e; }
-
-.conposition-desc__wrapper {
-  display: flex;
-  justify-content: space-between;
-  width: 160px; }
-
-.conposition-desc__name {
-  font-family: 'Conv_Ubuntu-Regular';
-  font-size: 14px;
-  color: #464848; }
-
-.conposition-desc__number {
-  font-family: 'Conv_Ubuntu-Light';
-  font-size: 14px;
-  color: #464848; }
-
-.slider__kkal {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  position: absolute;
-  left: 0;
-  bottom: -90px;
-  width: 90px;
-  height: 90px; }
-
-.slider__kkal-icon {
-  width: 60px;
-  height: 60px;
-  fill: white; }
-
-.slider__kkal-number {
-  position: absolute;
-  top: 24px;
-  font-family: 'Conv_Gagalin-Regular';
-  font-size: 20px;
-  line-height: 1.5;
-  color: white; }
-
-.slider__kkal-name {
-  font-family: 'Conv_Gagalin-Regular';
-  font-size: 14px;
-  line-height: 1.5;
-  color: white; }
-
-.slider__left {
-  width: 500px;
-  height: 350px;
-  margin: 70px 20px 0 0; }
-
-.slider__right {
-  display: flex;
-  flex-flow: column nowrap; }
-
-.slider__desc {
-  margin: 30px 0 0 0;
-  font-family: 'Conv_Ubuntu-Light';
-  font-size: 14px;
-  line-height: 1.8rem;
-  color: white; }
-
-.slider__order {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: baseline; }
-
-.slider__price-big {
-  margin-right: 10px;
-  font-family: 'Conv_Gagalin-Regular';
-  font-size: 72px;
-  line-height: 1.5;
-  color: #e35028; }
-
-.slider__price-small {
-  margin-right: 30px;
-  font-family: 'Conv_Gagalin-Regular';
-  font-size: 30px;
-  line-height: 1.5;
-  color: #e35028; }
-
-/*# sourceMappingURL=burgers.css.map */
+Backtrace:
+css/scss/burgers.scss:39:in `tablet'
+css/scss/burgers.scss:39
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `block in with_mixin'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `with_mixin'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `map'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:159:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:331:in `block in watch'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'tablet'.\A         on line 39 of css/scss/burgers.scss, in `tablet'\A         from line 39 of css/scss/burgers.scss\A \A 34: .burgers__wrapper {\A 35:     position: relative;\A 36:     width: 940px;\A 37:     height: 100vh;\A 38:     padding: 80px 0;\A 39:     @include tablet {\A 40:         width: 550px;\A 41:     }\A 42: }\A 43: \A 44: .conposition-menu {"; }

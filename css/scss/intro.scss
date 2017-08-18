@@ -1,23 +1,30 @@
 .intro {
-    padding: 0 80px 0 80px;
+    padding: 0 80px;
     background: url('../img/bg/intro_bg.jpg') no-repeat;
     background-size: cover;
+    @include tablet {
+        padding: 5px 25px;
+    }
 }
 
 .intro__wrapper {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: space-between;
     position: relative;
-    max-width: 940px;
+    min-width: 945px;
     height: 100vh;
-    min-height: 650px;
+    min-height: 645px;
+    padding: 12px 0;
+    @include tablet {
+        width: 100%;
+    }
 }
 
 .intro-top {
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     font-family: 'Conv_Ubuntu-Medium';
     font-size: 13px;
@@ -25,17 +32,23 @@
     color: white;
 }
 
+.intro-top__left {
+    z-index: 200;
+    position: relative;
+}
+
 .intro-top__logo-link {
     display: flex;
-    width: 100px;
+    width: 95px;
     height: 80px;
     border-radius: 20px;
-    background: url('../img/icon/logo.svg') center center no-repeat;
-    background-size: 100%;
+    background: url('../img/icon/logo.svg') no-repeat;
+    background-size: contain;
 }
 
 .intro-top__right {
     display: flex;
+    margin: 15px 0 0 0;
 }
 
 .intro-top__menu-list {
@@ -54,8 +67,7 @@
         content: "";
         width: 4px;
         height: 4px;
-        margin-left: 16px;
-        margin-top: -3px;
+        margin: -3px 0 0 14px;
         vertical-align: middle;
         border-radius: 50%;
         background-color: white;
@@ -67,7 +79,7 @@
 }
 
 .intro-top__menu-link {
-    margin-left: 16px;
+    margin: 0 0 0 15px;
 }
 
 .intro-top__menu-link:active,
@@ -75,44 +87,144 @@
 .intro-top__menu-link:visited {
     font-family: 'Conv_Ubuntu-Medium';
     font-size: 13px;
+    font-weight: lighter;
+    letter-spacing: .3px;
     text-transform: uppercase;
     color: white;
 }
 
 .buttom-order--margin {
-    margin-left: 16px;
+    margin-left: 15px;
 }
 
+.intro-top__menu-mobile {
+    z-index: 200;
+    display: none;
+    position: relative;
+    margin: 0 0 0 30px;
+    padding: 1px 1px 1px 1px;
+    @include tablet {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.intro-top__menu-mobile-line {
+    width: 24px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: white;
+    margin: 0 0 5px 0;
+    &:last-child {
+        margin: 0 0 0 0;
+    }
+}
+
+.intro-top__menu-mobile--popup {
+    &>.intro-top__menu-mobile-line:nth-child(1) {
+        transform: rotate(-45deg) translate(-35%, 220%);
+        transform-origin: 0 0;
+        background-color: #c1c2c2;
+    }
+    &>.intro-top__menu-mobile-line:nth-child(2) {
+        display: none;
+    }
+    &>.intro-top__menu-mobile-line:nth-child(3) {
+        transform: rotate(45deg) translate(-30%, -300%);
+        transform-origin: 0 0;
+        background-color: #c1c2c2;
+    }
+}
+
+//----------------------
+.intro-top__menu-list--popup {
+    z-index: 100;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #2f3234;
+    &>.intro-top__menu-item {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        &:after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            margin: 0;
+            vertical-align: middle;
+            border-radius: 50%;
+            background-color: white;
+        }
+        &:last-child:after {
+            content: "";
+            display: none;
+        }
+        &>.intro-top__menu-link {
+            margin: 26px 0;
+            font-family: 'Conv_Ubuntu-Regular';
+            font-size: 24px;
+            text-transform: uppercase;
+            color: white;
+        }
+    }
+}
+
+//-------------------------
 .intro-middle {
     display: flex;
-    justify-content: center;
-    padding-bottom: 10vh;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include tablet {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 1vh;
+    }
 }
 
 .intro-middle__img {
-    width: 454px;
-    height: 420px;
+    margin: 45px 0 0 20px;
+    @include tablet {
+        width: 40vh;
+    }
 }
 
 .intro-middle__text {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    margin: 100px 0 0 5vw;
+    margin: 115px 45px 0 0;
     vertical-align: top;
     text-align: left;
+    @include tablet {
+        margin: 100px 0 0 0;
+        text-align: center;
+    }
 }
 
 .title-section--orange {
-    margin: 0 0 10px 0;
+    margin: 0 0 0 0;
     color: #f9b43b;
 }
 
 .intro-middle__text-bottom {
     display: block;
-    margin-bottom: -10px;
+    margin: 23px 0 0 0;
+    &:last-child {
+        margin: 0 0 0 0;
+    }
     font-family: 'Conv_Lifehack Medium';
     font-size: 65px;
+    line-height: 60px;
     color: white;
 }
 
@@ -120,7 +232,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-bottom: 40px;
+    margin: 90px 0 25px 0
 }
 
 .intro-bottom__link-icon {

@@ -3,7 +3,7 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 75px 80px 75px 80px;
+    padding: 60px 80px 60px 80px;
     background: url('../img/bg/about_bg.jpg') no-repeat;
     background-size: cover;
     @include phone {
@@ -22,11 +22,12 @@
 .about__list {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
-    padding-bottom: 80px;
+    padding: 55px 0 80px 0;
     @include phone {
         flex-flow: column nowrap;
+        justify-content: center;
         margin-top: 45px;
         padding-bottom: 10px;
     }
@@ -35,8 +36,9 @@
 .about__item {
     display: flex;
     flex-flow: column nowrap;
+    justify-content: flex-start;
     align-items: center;
-    width: 290px;
+    width: 300px;
     margin: 0 10px;
     padding: 0 10px 0 10px;
     @include phone {
@@ -55,7 +57,7 @@
 .about-article__icon--meat {
     width: 96px;
     height: 89px;
-    margin: 0 0 10px 0;
+    margin: 0 0 31px 0;
     fill: #e2522a;
     @include phone {
         margin: 0 10px 0 0;
@@ -65,7 +67,7 @@
 .about-article__icon--hand {
     width: 73px;
     height: 86px;
-    margin-bottom: 13px;
+    margin: 0 0 33px 0;
     fill: #f8b43a;
     @include phone {
         margin: 0 33px 0 0;
@@ -75,7 +77,7 @@
 .about-article__icon--natural {
     width: 88px;
     height: 76px;
-    margin-bottom: 23px;
+    margin: 0 0 43px 0;
     fill: #8ac03e;
     @include phone {
         margin: 0 18px 0 0;
@@ -83,13 +85,16 @@
 }
 
 .about-article__title {
+    margin: 0 0 15px 0;
     text-align: center;
     font-family: 'Conv_Lifehack Medium';
     font-size: 21px;
     font-weight: lighter;
-    line-height: 1.5;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
     color: #2f3234;
     @include phone {
+        margin: 0 0;
         text-align: left;
     }
 }
@@ -98,7 +103,7 @@
     text-align: center;
     font-family: 'Conv_Ubuntu-Light';
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.8;
     color: #676667;
     @include phone {
         text-align: left;
