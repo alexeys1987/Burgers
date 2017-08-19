@@ -2,7 +2,7 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     background: -webkit-linear-gradient(#f9b43b 0%, #f9b43b 5%, #eb8d38 48%, #f9b43b 95%, #f9b43b 100%);
     background: -moz-linear-gradient(#f9b43b 0%, #f9b43b 5%, #eb8d38 48%, #f9b43b 95%, #f9b43b 100%);
     background: -o-linear-gradient(#f9b43b 0%, #f9b43b 5%, #eb8d38 48%, #f9b43b 95%, #f9b43b 100%);
@@ -12,7 +12,7 @@
 }
 
 .arrow-scroll {
-    margin: 300px 0 0 0;
+    margin: 90px 0 0 0;
 }
 
 .arrow-scroll--rotate-minus90 {
@@ -32,6 +32,10 @@
 }
 
 .burgers__wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 940px;
     height: 100vh;
@@ -39,6 +43,10 @@
     @include tablet {
         width: 550px;
     }
+}
+
+.slider-wrapper {
+    position: relative;
 }
 
 .conposition-menu {
@@ -80,7 +88,7 @@
     position: absolute;
     left: 93px;
     margin: 10px 0 0 0px;
-    padding: 19px 20px 10px 20px;
+    padding: 17px 20px 10px 22px;
     border-radius: 3px;
     background-color: rgba(white, .9)
 }
@@ -137,7 +145,7 @@
     align-items: center;
     position: absolute;
     left: -12px;
-    bottom: 75px;
+    bottom: -75px;
     width: 90px;
     height: 90px;
     opacity: .6;
@@ -174,7 +182,6 @@
     flex-flow: row nowrap;
     position: relative;
     width: 100%;
-    height: 100%;
     @include tablet {
         flex-direction: column;
         align-items: center;

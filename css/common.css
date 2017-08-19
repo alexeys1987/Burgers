@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'tablet'.
-        on line 74 of css/scss/common.scss, in `tablet'
-        from line 74 of css/scss/common.scss
+        on line 73 of css/scss/common.scss, in `tablet'
+        from line 73 of css/scss/common.scss
 
-69:     flex-flow: column nowrap;
-70:     position: fixed;
-71:     right: 20px;
-72:     top: 90px;
-73:     z-index: 100;
-74:     @include tablet {
-75:         display: none;
-76:     }
-77:     @include phone {
-78:         display: none;
-79:     }
+68:     flex-flow: column nowrap;
+69:     position: fixed;
+70:     right: 20px;
+71:     top: 90px;
+72:     z-index: 100;
+73:     @include tablet {
+74:         display: none;
+75:     }
+76:     @include phone {
+77:         display: none;
+78:     }
 
 Backtrace:
-css/scss/common.scss:74:in `tablet'
-css/scss/common.scss:74
+css/scss/common.scss:73:in `tablet'
+css/scss/common.scss:73
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
@@ -69,4 +69,4 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'tablet'.\A         on line 74 of css/scss/common.scss, in `tablet'\A         from line 74 of css/scss/common.scss\A \A 69:     flex-flow: column nowrap;\A 70:     position: fixed;\A 71:     right: 20px;\A 72:     top: 90px;\A 73:     z-index: 100;\A 74:     @include tablet {\A 75:         display: none;\A 76:     }\A 77:     @include phone {\A 78:         display: none;\A 79:     }"; }
+  content: "Error: Undefined mixin 'tablet'.\A         on line 73 of css/scss/common.scss, in `tablet'\A         from line 73 of css/scss/common.scss\A \A 68:     flex-flow: column nowrap;\A 69:     position: fixed;\A 70:     right: 20px;\A 71:     top: 90px;\A 72:     z-index: 100;\A 73:     @include tablet {\A 74:         display: none;\A 75:     }\A 76:     @include phone {\A 77:         display: none;\A 78:     }"; }

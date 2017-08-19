@@ -28,6 +28,13 @@ $(document).ready(function() {
         // }, 300, "linear");
         allElemShow.removeClass('menu-acco__desc-wrapper--show');
     });
+    $('.menu-title-wrapper').on('click', function(e) {
+        var allElemShow = $(e.currentTarget).closest('.menu').find('.menu-acco__desc-wrapper');
+        // allElemShow.animate({
+        //     'width': '0'
+        // }, 300, "linear");
+        allElemShow.removeClass('menu-acco__desc-wrapper--show');
+    });
     $('.menu .menu-acco .menu-acco__link').on('click', function(e) {
         e.preventDefault();
         var elemShow = $(e.currentTarget).find('.menu-acco__desc-wrapper').hasClass('menu-acco__desc-wrapper--show');

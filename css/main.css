@@ -23,8 +23,8 @@ a:hover {
 
 .wrapper {
   position: relative;
-  width: 100vw;
-  overflow-y: hidden; }
+  width: 100%;
+  overflow: hidden; }
 
 .section {
   display: flex;
@@ -114,7 +114,6 @@ a:hover {
   display: none; }
 
 .intro {
-  padding: 0 80px;
   background: url("../img/bg/intro_bg.jpg") no-repeat;
   background-size: cover; }
   @media screen and (max-width: 768px) {
@@ -427,7 +426,7 @@ a:hover {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   background: -webkit-linear-gradient(#f9b43b 0%, #f9b43b 5%, #eb8d38 48%, #f9b43b 95%, #f9b43b 100%);
   background: -moz-linear-gradient(#f9b43b 0%, #f9b43b 5%, #eb8d38 48%, #f9b43b 95%, #f9b43b 100%);
   background: -o-linear-gradient(#f9b43b 0%, #f9b43b 5%, #eb8d38 48%, #f9b43b 95%, #f9b43b 100%);
@@ -436,7 +435,7 @@ a:hover {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
 
 .arrow-scroll {
-  margin: 300px 0 0 0; }
+  margin: 90px 0 0 0; }
 
 .arrow-scroll--rotate-minus90 {
   padding: 0 0 0 10px;
@@ -452,6 +451,10 @@ a:hover {
   fill: white; }
 
 .burgers__wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 940px;
   height: 100vh;
@@ -459,6 +462,9 @@ a:hover {
   @media screen and (max-width: 768px) {
     .burgers__wrapper {
       width: 550px; } }
+
+.slider-wrapper {
+  position: relative; }
 
 .conposition-menu {
   z-index: 100;
@@ -496,7 +502,7 @@ a:hover {
   position: absolute;
   left: 93px;
   margin: 10px 0 0 0px;
-  padding: 19px 20px 10px 20px;
+  padding: 17px 20px 10px 22px;
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.9); }
 
@@ -542,7 +548,7 @@ a:hover {
   align-items: center;
   position: absolute;
   left: -12px;
-  bottom: 75px;
+  bottom: -75px;
   width: 90px;
   height: 90px;
   opacity: .6; }
@@ -574,8 +580,7 @@ a:hover {
   display: flex;
   flex-flow: row nowrap;
   position: relative;
-  width: 100%;
-  height: 100%; }
+  width: 100%; }
   @media screen and (max-width: 768px) {
     .slider {
       flex-direction: column;
@@ -633,7 +638,7 @@ a:hover {
   display: flex;
   flex-flow: column nowrap;
   width: 48%;
-  padding: 70px 15% 0 65px;
+  padding: 70px 0 0 65px;
   background: rgba(47, 50, 52, 0.95); }
 
 .team-list__link {
