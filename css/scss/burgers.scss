@@ -2,27 +2,47 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    align-items: flex-start;
-    background: -webkit-linear-gradient(#f9b43b 0%, #f9b43b 15%, #eb8d38 48%, #f9b43b 85%, #f9b43b 100%);
-    background: -moz-linear-gradient(#f9b43b 0%, #f9b43b 15%, #eb8d38 48%, #f9b43b 85%, #f9b43b 100%);
-    background: -o-linear-gradient(#f9b43b 0%, #f9b43b 15%, #eb8d38 48%, #f9b43b 85%, #f9b43b 100%);
-    background: linear-gradient(#f9b43b 0%, #f9b43b 15%, #eb8d38 48%, #f9b43b 85%, #f9b43b 100%);
+    align-items: center;
+    background: -webkit-linear-gradient(#f9b43b 0%, #f9b43b 5%, #eb8d38 48%, #f9b43b 95%, #f9b43b 100%);
+    background: -moz-linear-gradient(#f9b43b 0%, #f9b43b 5%, #eb8d38 48%, #f9b43b 95%, #f9b43b 100%);
+    background: -o-linear-gradient(#f9b43b 0%, #f9b43b 5%, #eb8d38 48%, #f9b43b 95%, #f9b43b 100%);
+    background: linear-gradient(#f9b43b 0%, #f9b43b 30%, #eb8d38 48%, #eb8d38 58%, #f9b43b 95%, #f9b43b 100%);
     /* Chrome10-25,Safari5.1-6 */
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    @include tablet {
+        padding: 0;
+    }
+    @include phone {
+        justify-content: space-between;
+        padding: 0 10px;
+    }
 }
 
 .arrow-scroll {
-    margin: 300px 0 0 0;
+    margin: 90px 0 0 0;
 }
 
 .arrow-scroll--rotate-minus90 {
     padding: 0 0 0 10px;
     transform: rotate(-90deg);
+    @include tablet {
+        margin: 10px 30px 0 0;
+    }
+    @include phone {
+        justify-content: space-between;
+        margin: -24px -10px 0 0;
+    }
 }
 
 .arrow-scroll--rotate-plus90 {
     padding: 0 10px 0 0;
     transform: rotate(90deg);
+    @include tablet {
+        margin: 10px 0 0 30px;
+    }
+    @include phone {
+        margin: -24px 0 0 -12px;
+    }
 }
 
 .arrow-scroll__icon {
@@ -32,19 +52,27 @@
 }
 
 .burgers__wrapper {
-    position: relative;
-    width: 940px;
-}
-
-.slider {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 100%;
-    margin-top: 100px;
+    max-width: 940px;
+    height: 100vh;
+    padding: 80px 0;
+    @include phone {
+        margin: 0 -28px;
+        padding: 0;
+    }
+}
+
+.slider-wrapper {
+    position: relative;
 }
 
 .conposition-menu {
+    z-index: 100;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -52,9 +80,16 @@
     position: absolute;
     width: 90px;
     height: 90px;
+    margin: 10px 0 0 3px;
     border-radius: 3px;
     background-color: #e35028;
     fill: white;
+    @include tablet {
+        margin: 2px 0 0 46px;
+    }
+    @include phone {
+        margin: 0;
+    }
 }
 
 .conposition-menu__icon {
@@ -72,15 +107,22 @@
 }
 
 .conposition-desc {
+    z-index: 100;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
     position: absolute;
-    left: 90px;
-    padding: 18px 20px;
+    margin: 10px 0 0 93px;
+    padding: 17px 20px 10px 22px;
     border-radius: 3px;
-    background-color: rgba(white, .9)
+    background-color: rgba(white, .9);
+    @include tablet {
+        margin: 2px 0 0 135px;
+    }
+    @include phone {
+        margin: 0 0 0 90px;
+    }
 }
 
 .conposition-desc__item {
@@ -88,13 +130,13 @@
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 11px;
 }
 
 .conposition-desc__img {
     width: 44px;
     height: 40px;
-    margin: 0 20px 0 0;
+    margin: 0 25px 0 0;
 }
 
 .conposition-desc__img--red {
@@ -134,10 +176,20 @@
     flex-flow: column nowrap;
     align-items: center;
     position: absolute;
-    left: 0;
-    bottom: -90px;
+    bottom: -75px;
+    left: -12px;
     width: 90px;
     height: 90px;
+    opacity: .6;
+    @include tablet {
+        top: 1px;
+        left: auto;
+        right: 37px;
+    }
+    @include phone {
+        top: 0;
+        right: -14px;
+    }
 }
 
 .slider__kkal-icon {
@@ -162,43 +214,115 @@
     color: white;
 }
 
+.slider {
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    width: 100%;
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0;
+    }
+}
+
 .slider__left {
-    width: 500px;
-    height: 350px;
-    margin: 70px 20px 0 0;
+    flex-shrink: 0;
+    width: 460px;
+    height: 330px;
+    margin: 80px 25px 0 0;
+    @include phone {
+        margin: 9px 0 8px 0;
+    }
+    @include phone {
+        width: 367px;
+        height: 260px;
+        margin: 111px 0 14px 10px;
+    }
 }
 
 .slider__right {
     display: flex;
     flex-flow: column nowrap;
+    @include tablet {
+        align-items: center;
+    }
+}
+
+.title-section--center {
+    color: white;
+    line-height: 65px;
+    margin: 0;
+    @include tablet {
+        width: 460px;
+        padding: 0;
+        text-align: center;
+    }
+    @include phone {
+        width: 360px;
+        font-size: 50px;
+        line-height: 59px;
+    }
 }
 
 .slider__desc {
-    margin: 30px 0 0 0;
+    margin: 40px 0 0 0;
     font-family: 'Conv_Ubuntu-Light';
     font-size: 14px;
-    line-height: 1.8rem;
+    line-height: 1.5rem;
     color: white;
+    @include tablet {
+        width: 100%;
+        max-width: 570px;
+        margin: 21px 0 23px 0;
+        text-align: center;
+    }
+    @include phone {
+        margin: 14px 0 10px 0;
+    }
 }
 
 .slider__order {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: flex-start;
     align-items: baseline;
+    @include tablet {
+        justify-content: center;
+    }
+    @include phone {
+        margin: 0 15px 17px 0;
+    }
 }
 
 .slider__price-big {
-    margin-right: 10px;
+    margin-right: 0;
     font-family: 'Conv_Gagalin-Regular';
     font-size: 72px;
-    line-height: 1.5;
     color: #e35028;
+    @include tablet {
+        margin-left: 5px;
+    }
+    @include phone {
+        margin: 0 7px 0 10px;
+        font-size: 50px
+    }
 }
 
 .slider__price-small {
-    margin-right: 30px;
+    margin-right: 25px;
     font-family: 'Conv_Gagalin-Regular';
     font-size: 30px;
-    line-height: 1.5;
     color: #e35028;
+    @include tablet {
+        margin-right: 25px;
+    }
+    @include phone {
+        margin-right: 28px;
+        font-size: 24px
+    }
+}
+
+.buttom-order--center {
+    @include phone {}
 }

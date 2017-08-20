@@ -1,206 +1,72 @@
-.order {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: stretch;
-  padding: 0 0 90px 0;
-  background: url("../img/bg/order_bg.jpg") no-repeat;
-  background-size: cover; }
+/*
+Error: Undefined mixin 'tablet'.
+        on line 22 of css/scss/order.scss, in `tablet'
+        from line 22 of css/scss/order.scss
 
-.order__wrapper {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  position: relative;
-  max-width: 940px;
-  height: 100vh;
-  min-height: 650px;
-  padding: 90px 0 90px 0; }
+17:     width: 100%;
+18:     max-width: 960px;
+19:     height: 100vh;
+20:     min-height: 650px;
+21:     padding: 70px 10px;
+22:     @include tablet {
+23:         padding: 103px 0;
+24:     }
+25:     @include phone {
+26:         width: 96%;
+27:         min-height: 350px;
 
-.title-section--orange-center {
-  display: block;
-  margin: 0 0 90px 0;
-  text-align: center;
-  color: #f9b43b; }
-
-.form-order {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: stretch;
-  position: relative; }
-
-.form-order__row {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  position: relative;
-  width: 50%;
-  padding: 0 10px 0 10px;
-  font-family: 'Conv_Ubuntu-Light';
-  font-size: 14px;
-  font-weight: lighter;
-  color: white; }
-
-.form-order__row--small {
-  height: 222px; }
-
-.form-order__name-label--half {
-  width: 47%; }
-
-.form-order__name-label--full {
-  width: 100%; }
-
-.form-order__name-label--quarter {
-  width: 23%; }
-
-.form-order__name {
-  width: 100%;
-  margin-bottom: 10px; }
-
-.form-order__name-input {
-  width: 100%;
-  height: 35px;
-  padding: 0 20px;
-  border: 2px solid transparent;
-  border-radius: 3px; }
-
-.form-order__name-input::-webkit-input-placeholder {
-  font-family: 'Conv_Ubuntu-Light';
-  font-size: 14px;
-  font-weight: lighter;
-  color: #98999a; }
-
-.form-order__name-input::-moz-placeholder {
-  font-family: 'Conv_Ubuntu-Light';
-  font-size: 14px;
-  font-weight: lighter;
-  color: #98999a; }
-
-.form-order__textarea-label {
-  width: 100%;
-  margin-bottom: 19px; }
-
-.form-order__name-textarea {
-  width: 100%;
-  margin-bottom: 10px; }
-
-.form-order__textarea {
-  width: 100%;
-  height: 109px;
-  padding: 8px 20px;
-  border: 2px solid transparent;
-  border-radius: 3px;
-  resize: none; }
-
-.form-order__textarea::-webkit-input-placeholder {
-  font-family: 'Conv_Ubuntu-Light';
-  font-size: 14px;
-  font-weight: lighter;
-  color: #98999a; }
-
-.form-order__textarea::-moz-placeholder {
-  font-family: 'Conv_Ubuntu-Light';
-  font-size: 14px;
-  font-weight: lighter;
-  color: #98999a; }
-
-.form-order__name-input:focus,
-.form-order__textarea:focus {
-  border: 2px solid #f9b43b;
-  outline: none; }
-
-.form-order__controls-radio {
-  display: flex;
-  flex-flow: row nowrap;
-  width: 100%;
-  margin-bottom: 26px; }
-
-.form-order__radio {
-  display: flex;
-  flex-flow: row nowrap; }
-
-.form-order__radio-fake {
-  flex-shrink: 0;
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
-  border-radius: 50%;
-  background-color: white; }
-  .form-order__radio-fake:before {
-    content: "";
-    display: none;
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    margin-left: 4px;
-    margin-top: 4px;
-    border-radius: 50%;
-    background-color: #e45028; }
-
-.elem-hide:checked + .form-order__radio-fake:before {
-  display: block; }
-
-.form-order__radio-text {
-  margin-right: 20px; }
-
-.form-order__controls-checkbox {
-  display: flex;
-  flex-flow: row nowrap;
-  width: 100%;
-  margin-bottom: 20px; }
-
-.form-order__checkbox {
-  display: flex;
-  flex-flow: row nowrap; }
-
-.form-order__checkbox-fake {
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
-  background-color: white; }
-  .form-order__checkbox-fake:before {
-    content: "";
-    display: none;
-    position: absolute;
-    width: 6px;
-    height: 3px;
-    margin-left: 2px;
-    margin-top: 8px;
-    background-color: #e45028;
-    transform: rotate(45deg); }
-  .form-order__checkbox-fake:after {
-    content: "";
-    display: none;
-    position: absolute;
-    width: 11px;
-    height: 3px;
-    margin-left: 4px;
-    margin-top: 7px;
-    background-color: #e45028;
-    transform: rotate(-45deg); }
-
-.elem-hide:checked + .form-order__checkbox-fake:before {
-  display: block; }
-
-.elem-hide:checked + .form-order__checkbox-fake:after {
-  display: block; }
-
-.form-order__checkbox-text {
-  margin-right: 20px; }
-
-.form-order__controls-buttons {
-  display: flex;
-  width: 100%; }
-
-.form-order__submit-text {
-  margin: 13px 16px;
-  border-radius: 5px; }
-
-.form-order__submit-text:active,
-.form-order__submit-text:visited,
-.form-order__submit-text:hover {
-  color: white; }
-
-/*# sourceMappingURL=order.css.map */
+Backtrace:
+css/scss/order.scss:22:in `tablet'
+css/scss/order.scss:22
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `block in with_mixin'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `with_mixin'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `map'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:159:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:331:in `block in watch'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'tablet'.\A         on line 22 of css/scss/order.scss, in `tablet'\A         from line 22 of css/scss/order.scss\A \A 17:     width: 100%;\A 18:     max-width: 960px;\A 19:     height: 100vh;\A 20:     min-height: 650px;\A 21:     padding: 70px 10px;\A 22:     @include tablet {\A 23:         padding: 103px 0;\A 24:     }\A 25:     @include phone {\A 26:         width: 96%;\A 27:         min-height: 350px;"; }

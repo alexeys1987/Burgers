@@ -31,9 +31,27 @@
         -moz-transition: all .2s ease-in-out;
         -o-transition: all .2s ease-in-out;
         transition: all .2s ease-in-out;
+        @include tablet {
+            margin: -32px 0 0 0;
+        }
+        @include phone {
+            display: none;
+        }
     }
     &:hover:before {
         background: rgba(0, 0, 0, .5);
+        @include phone {
+            display: none;
+        }
+    }
+    @include tablet {
+        align-items: center;
+        width: 50%;
+        height: 25%;
+        padding: 32px 50px 0px 50px;
+    }
+    @include phone {
+        cursor: pointer;
     }
 }
 
@@ -74,15 +92,23 @@
     position: relative;
     width: 100%;
     // max-height: 20%;
-    margin-bottom: 25px;
+    margin: 0 0 22px 0;
     font-family: 'Conv_Gagalin-Regular';
-    font-size: 18px;
+    font-size: 13px;
     color: white;
     opacity: 0;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
+    @include tablet {
+        letter-spacing: 1px;
+        margin: 0 0 14px 0;
+        text-align: center;
+    }
+    @include phone {
+        display: none;
+    }
 }
 
 .feeds__text {
@@ -93,7 +119,7 @@
     margin-bottom: 10px;
     font-family: 'Conv_Ubuntu-Light';
     font-size: 14px;
-    line-height: 20px;
+    line-height: 24px;
     overflow: hidden;
     text-overflow: clip;
     color: white;
@@ -102,6 +128,13 @@
     -moz-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
+    @include tablet {
+        margin-bottom: 21px;
+        text-align: center;
+    }
+    @include phone {
+        display: none;
+    }
 }
 
 .feeds__button {
@@ -120,6 +153,9 @@
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     cursor: pointer;
+    @include phone {
+        display: none;
+    }
 }
 
 // .feeds__item:hover > .feeds__header,
