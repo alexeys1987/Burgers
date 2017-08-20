@@ -32,7 +32,11 @@ a:hover {
     position: relative;
     width: 100%;
     overflow: hidden;
-    transform: translateY(-400vh);
+    transform: translateY(0vh);
+    -webkit-transition: all .7s ease-in-out;
+    -moz-transition: all .7s ease-in-out;
+    -o-transition: all .7s ease-in-out;
+    transition: all .7s ease-in-out;
 }
 
 .section {
@@ -100,16 +104,16 @@ a:hover {
         border-radius: 50%;
         background-color: white;
     }
-    &:after {
-        content: "";
-        position: absolute;
-        left: -2px;
-        top: -2px;
-        width: 14px;
-        height: 14px;
-        border: 1px solid white;
-        border-radius: 50%;
-    }
+}
+
+.menu-radio-fixed__link-active {
+    position: relative;
+    left: -1px;
+    top: -1px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid white;
+    border-radius: 50%;
 }
 
 .buttom-order {

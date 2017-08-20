@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'phone'.
-        on line 55 of css/scss/common.scss, in `phone'
-        from line 55 of css/scss/common.scss
+        on line 59 of css/scss/common.scss, in `phone'
+        from line 59 of css/scss/common.scss
 
-50:     display: block;
-51:     font-family: 'Conv_Gagalin-Regular';
-52:     font-size: 72px;
-53:     font-weight: lighter;
-54:     text-transform: uppercase;
-55:     @include phone {
-56:         font-size: 63px;
-57:     }
-58: }
-59: 
-60: .clearfix:before,
+54:     display: block;
+55:     font-family: 'Conv_Gagalin-Regular';
+56:     font-size: 72px;
+57:     font-weight: lighter;
+58:     text-transform: uppercase;
+59:     @include phone {
+60:         font-size: 63px;
+61:     }
+62: }
+63: 
+64: .clearfix:before,
 
 Backtrace:
-css/scss/common.scss:55:in `phone'
-css/scss/common.scss:55
+css/scss/common.scss:59:in `phone'
+css/scss/common.scss:59
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
@@ -69,4 +69,4 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'phone'.\A         on line 55 of css/scss/common.scss, in `phone'\A         from line 55 of css/scss/common.scss\A \A 50:     display: block;\A 51:     font-family: 'Conv_Gagalin-Regular';\A 52:     font-size: 72px;\A 53:     font-weight: lighter;\A 54:     text-transform: uppercase;\A 55:     @include phone {\A 56:         font-size: 63px;\A 57:     }\A 58: }\A 59: \A 60: .clearfix:before,"; }
+  content: "Error: Undefined mixin 'phone'.\A         on line 59 of css/scss/common.scss, in `phone'\A         from line 59 of css/scss/common.scss\A \A 54:     display: block;\A 55:     font-family: 'Conv_Gagalin-Regular';\A 56:     font-size: 72px;\A 57:     font-weight: lighter;\A 58:     text-transform: uppercase;\A 59:     @include phone {\A 60:         font-size: 63px;\A 61:     }\A 62: }\A 63: \A 64: .clearfix:before,"; }
