@@ -2,7 +2,7 @@
     background: url('../img/bg/intro_bg.jpg') no-repeat;
     background-size: cover;
     @include tablet {
-        padding: 5px 25px;
+        padding: 0;
     }
 }
 
@@ -11,12 +11,17 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     position: relative;
-    min-width: 945px;
+    width: 100%;
+    max-width: 945px;
     height: 100vh;
     min-height: 645px;
     padding: 12px 0;
     @include tablet {
         width: 100%;
+        padding: 12px 20px 12px 30px;
+    }
+    @include phone {
+        padding: 12px 20px 12px 20px;
     }
 }
 
@@ -186,14 +191,18 @@
         flex-flow: column nowrap;
         justify-content: flex-start;
         align-items: center;
-        padding-bottom: 1vh;
     }
 }
 
 .intro-middle__img {
     margin: 45px 0 0 20px;
     @include tablet {
-        width: 40vh;
+        width: 450px;
+        margin: 83px 0 0 8px;
+    }
+    @include phone {
+        width: 370px;
+        margin: 70px 0 44px 2px;
     }
 }
 
@@ -205,7 +214,7 @@
     vertical-align: top;
     text-align: left;
     @include tablet {
-        margin: 100px 0 0 0;
+        margin: 18px 0 0 0;
         text-align: center;
     }
 }
@@ -225,13 +234,21 @@
     font-size: 65px;
     line-height: 60px;
     color: white;
+    @include tablet {}
+    @include phone {
+        margin: 4px 0 0 0;
+        font-size: 54px;
+    }
 }
 
 .intro-bottom__link {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin: 90px 0 25px 0
+    margin: 90px 0 25px 0;
+    @include phone {
+        margin: 99px 0 18px 0;
+    }
 }
 
 .intro-bottom__link-icon {

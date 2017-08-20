@@ -17,7 +17,25 @@
 .menu-title {
     width: 940px;
     height: 100vh;
-    padding: 100px 0 0 20px;
+    padding: 45px 0 0 18px;
+    @include tablet {
+        width: 100%;
+        height: 100vh;
+        padding: 48px 0 0 23px;
+    }
+    @include phone {
+        padding: 13px 0 0 62px;
+    }
+}
+
+.title-section--white {
+    color: white;
+    @include tablet {
+        text-align: left;
+    }
+    @include phone {
+        font-size: 50px;
+    }
 }
 
 .menu-acco {
@@ -77,6 +95,14 @@
     color: white;
     transform: rotate(-90deg) translate(-50%, -50%);
     transform-origin: 0 0;
+    @include tablet {
+        top: 95%;
+        transform: rotate(-90deg) translate(0%, -50%);
+    }
+    @include phone {
+        left: 44%;
+        top: 92.5%;
+    }
 }
 
 .menu-acco__desc-wrapper {
@@ -84,26 +110,26 @@
     width: 0;
     height: 100%;
     background: rgba(#3d4041, .93);
-    overflow: hidden;
     -webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
 }
 
-.menu-acco__desc-wrapper--show {
-    width: 540px;
-}
-
+// .menu-acco__desc-wrapper--show {
+//     width: 540px;
+// }
 .menu-acco__desc {
+    display: block;
     position: absolute;
     left: 0;
     top: 0;
-    width: 540px;
-    height: 100%;
+    height: 95%;
     padding: 58px 32px;
     font-family: 'Conv_Ubuntu-Light';
     font-size: 14px;
     line-height: 20px;
     color: white;
+    overflow: hidden;
+    text-overflow: clip;
 }

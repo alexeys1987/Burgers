@@ -9,6 +9,13 @@
     background: linear-gradient(#f9b43b 0%, #f9b43b 30%, #eb8d38 48%, #eb8d38 58%, #f9b43b 95%, #f9b43b 100%);
     /* Chrome10-25,Safari5.1-6 */
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    @include tablet {
+        padding: 0;
+    }
+    @include phone {
+        justify-content: space-between;
+        padding: 0 10px;
+    }
 }
 
 .arrow-scroll {
@@ -18,11 +25,24 @@
 .arrow-scroll--rotate-minus90 {
     padding: 0 0 0 10px;
     transform: rotate(-90deg);
+    @include tablet {
+        margin: 10px 30px 0 0;
+    }
+    @include phone {
+        justify-content: space-between;
+        margin: -24px -10px 0 0;
+    }
 }
 
 .arrow-scroll--rotate-plus90 {
     padding: 0 10px 0 0;
     transform: rotate(90deg);
+    @include tablet {
+        margin: 10px 0 0 30px;
+    }
+    @include phone {
+        margin: -24px 0 0 -12px;
+    }
 }
 
 .arrow-scroll__icon {
@@ -37,11 +57,13 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 940px;
+    width: 100%;
+    max-width: 940px;
     height: 100vh;
     padding: 80px 0;
-    @include tablet {
-        width: 550px;
+    @include phone {
+        margin: 0 -28px;
+        padding: 0;
     }
 }
 
@@ -58,11 +80,16 @@
     position: absolute;
     width: 90px;
     height: 90px;
-    left: 3px;
-    margin: 10px 0 0 0;
+    margin: 10px 0 0 3px;
     border-radius: 3px;
     background-color: #e35028;
     fill: white;
+    @include tablet {
+        margin: 2px 0 0 46px;
+    }
+    @include phone {
+        margin: 0;
+    }
 }
 
 .conposition-menu__icon {
@@ -86,11 +113,16 @@
     justify-content: flex-start;
     align-items: flex-start;
     position: absolute;
-    left: 93px;
-    margin: 10px 0 0 0px;
+    margin: 10px 0 0 93px;
     padding: 17px 20px 10px 22px;
     border-radius: 3px;
-    background-color: rgba(white, .9)
+    background-color: rgba(white, .9);
+    @include tablet {
+        margin: 2px 0 0 135px;
+    }
+    @include phone {
+        margin: 0 0 0 90px;
+    }
 }
 
 .conposition-desc__item {
@@ -144,14 +176,19 @@
     flex-flow: column nowrap;
     align-items: center;
     position: absolute;
-    left: -12px;
     bottom: -75px;
+    left: -12px;
     width: 90px;
     height: 90px;
     opacity: .6;
     @include tablet {
-        left: 90%;
-        top: 90px;
+        top: 1px;
+        left: auto;
+        right: 37px;
+    }
+    @include phone {
+        top: 0;
+        right: -14px;
     }
 }
 
@@ -185,25 +222,47 @@
     @include tablet {
         flex-direction: column;
         align-items: center;
+        padding: 0 0;
     }
 }
 
 .slider__left {
-    flex-shrink: 1;
-    width: 500px;
+    flex-shrink: 0;
+    width: 460px;
     height: 330px;
     margin: 80px 25px 0 0;
+    @include phone {
+        margin: 9px 0 8px 0;
+    }
+    @include phone {
+        width: 367px;
+        height: 260px;
+        margin: 111px 0 14px 10px;
+    }
 }
 
 .slider__right {
     display: flex;
     flex-flow: column nowrap;
+    @include tablet {
+        align-items: center;
+    }
 }
 
-.title-section--white {
+.title-section--center {
     color: white;
     line-height: 65px;
     margin: 0;
+    @include tablet {
+        width: 460px;
+        padding: 0;
+        text-align: center;
+    }
+    @include phone {
+        width: 360px;
+        font-size: 50px;
+        line-height: 59px;
+    }
 }
 
 .slider__desc {
@@ -212,27 +271,58 @@
     font-size: 14px;
     line-height: 1.5rem;
     color: white;
+    @include tablet {
+        width: 100%;
+        max-width: 570px;
+        margin: 21px 0 23px 0;
+        text-align: center;
+    }
+    @include phone {
+        margin: 14px 0 10px 0;
+    }
 }
 
 .slider__order {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: flex-start;
     align-items: baseline;
+    @include tablet {
+        justify-content: center;
+    }
+    @include phone {
+        margin: 0 15px 17px 0;
+    }
 }
 
 .slider__price-big {
     margin-right: 0;
     font-family: 'Conv_Gagalin-Regular';
     font-size: 72px;
-    line-height: 1.5;
-    font-stretch: ultra-condensed;
     color: #e35028;
+    @include tablet {
+        margin-left: 5px;
+    }
+    @include phone {
+        margin: 0 7px 0 10px;
+        font-size: 50px
+    }
 }
 
 .slider__price-small {
     margin-right: 25px;
     font-family: 'Conv_Gagalin-Regular';
     font-size: 30px;
-    line-height: 1.5;
     color: #e35028;
+    @include tablet {
+        margin-right: 25px;
+    }
+    @include phone {
+        margin-right: 28px;
+        font-size: 24px
+    }
+}
+
+.buttom-order--center {
+    @include phone {}
 }

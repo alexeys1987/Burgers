@@ -1,6 +1,6 @@
 /*
-Error: Undefined mixin 'phone'.
-        on line 9 of css/scss/about.scss, in `phone'
+Error: Undefined mixin 'tablet'.
+        on line 9 of css/scss/about.scss, in `tablet'
         from line 9 of css/scss/about.scss
 
 4:     justify-content: space-between;
@@ -8,15 +8,15 @@ Error: Undefined mixin 'phone'.
 6:     padding: 60px 80px 60px 80px;
 7:     background: url('../img/bg/about_bg.jpg') no-repeat;
 8:     background-size: cover;
-9:     @include phone {
-10:         justify-content: flex-start;
-11:         padding: 45px 5px 5px 5px;
-12:     }
-13: }
-14: 
+9:     @include tablet {
+10:         padding: 110px 0;
+11:     }
+12:     @include phone {
+13:         justify-content: flex-start;
+14:         align-items: flex-start;
 
 Backtrace:
-css/scss/about.scss:9:in `phone'
+css/scss/about.scss:9:in `tablet'
 css/scss/about.scss:9
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `block in with_mixin'
@@ -69,4 +69,4 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'phone'.\A         on line 9 of css/scss/about.scss, in `phone'\A         from line 9 of css/scss/about.scss\A \A 4:     justify-content: space-between;\A 5:     align-items: center;\A 6:     padding: 60px 80px 60px 80px;\A 7:     background: url('../img/bg/about_bg.jpg') no-repeat;\A 8:     background-size: cover;\A 9:     @include phone {\A 10:         justify-content: flex-start;\A 11:         padding: 45px 5px 5px 5px;\A 12:     }\A 13: }\A 14: "; }
+  content: "Error: Undefined mixin 'tablet'.\A         on line 9 of css/scss/about.scss, in `tablet'\A         from line 9 of css/scss/about.scss\A \A 4:     justify-content: space-between;\A 5:     align-items: center;\A 6:     padding: 60px 80px 60px 80px;\A 7:     background: url('../img/bg/about_bg.jpg') no-repeat;\A 8:     background-size: cover;\A 9:     @include tablet {\A 10:         padding: 110px 0;\A 11:     }\A 12:     @include phone {\A 13:         justify-content: flex-start;\A 14:         align-items: flex-start;"; }

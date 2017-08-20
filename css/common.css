@@ -1,23 +1,23 @@
 /*
-Error: Undefined mixin 'tablet'.
-        on line 73 of css/scss/common.scss, in `tablet'
-        from line 73 of css/scss/common.scss
+Error: Undefined mixin 'phone'.
+        on line 55 of css/scss/common.scss, in `phone'
+        from line 55 of css/scss/common.scss
 
-68:     flex-flow: column nowrap;
-69:     position: fixed;
-70:     right: 20px;
-71:     top: 90px;
-72:     z-index: 100;
-73:     @include tablet {
-74:         display: none;
-75:     }
-76:     @include phone {
-77:         display: none;
-78:     }
+50:     display: block;
+51:     font-family: 'Conv_Gagalin-Regular';
+52:     font-size: 72px;
+53:     font-weight: lighter;
+54:     text-transform: uppercase;
+55:     @include phone {
+56:         font-size: 63px;
+57:     }
+58: }
+59: 
+60: .clearfix:before,
 
 Backtrace:
-css/scss/common.scss:73:in `tablet'
-css/scss/common.scss:73
+css/scss/common.scss:55:in `phone'
+css/scss/common.scss:55
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
@@ -69,4 +69,4 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'tablet'.\A         on line 73 of css/scss/common.scss, in `tablet'\A         from line 73 of css/scss/common.scss\A \A 68:     flex-flow: column nowrap;\A 69:     position: fixed;\A 70:     right: 20px;\A 71:     top: 90px;\A 72:     z-index: 100;\A 73:     @include tablet {\A 74:         display: none;\A 75:     }\A 76:     @include phone {\A 77:         display: none;\A 78:     }"; }
+  content: "Error: Undefined mixin 'phone'.\A         on line 55 of css/scss/common.scss, in `phone'\A         from line 55 of css/scss/common.scss\A \A 50:     display: block;\A 51:     font-family: 'Conv_Gagalin-Regular';\A 52:     font-size: 72px;\A 53:     font-weight: lighter;\A 54:     text-transform: uppercase;\A 55:     @include phone {\A 56:         font-size: 63px;\A 57:     }\A 58: }\A 59: \A 60: .clearfix:before,"; }

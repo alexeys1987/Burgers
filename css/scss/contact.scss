@@ -19,6 +19,9 @@
     height: 58px;
     background: url('../img/map/map_footer.jpg') no-repeat;
     background-size: cover;
+    @include phone {
+        height: 106px;
+    }
 }
 
 .footer {
@@ -27,6 +30,15 @@
     justify-content: space-between;
     align-items: center;
     width: 940px;
+    @include tablet {
+        width: 100%;
+        padding: 0 25px;
+    }
+    @include phone {
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: flex-start;
+    }
 }
 
 .footer__left {
@@ -41,6 +53,9 @@
     font-size: 13px;
     letter-spacing: .03rem;
     color: white;
+    @include phone {
+        margin: 9px 0 9px 0;
+    }
 }
 
 .footer__tel {
@@ -60,6 +75,13 @@
         margin-right: 7px;
         background: url('../img/icon/phone.png') no-repeat;
         background-size: cover;
+        @include tablet {
+            margin-right: 5px;
+        }
+    }
+    @include phone {
+        margin: 0 0 19px 0;
+        text-align: center;
     }
 }
 
@@ -73,6 +95,12 @@
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     fill: white;
+    @include tablet {
+        margin-right: 18px;
+    }
+    @include phone {
+        margin-right: 21px;
+    }
     &:last-child {
         margin-right: 0;
     }

@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'tablet'.
-        on line 43 of css/scss/burgers.scss, in `tablet'
-        from line 43 of css/scss/burgers.scss
+        on line 12 of css/scss/burgers.scss, in `tablet'
+        from line 12 of css/scss/burgers.scss
 
-38:     align-items: center;
-39:     position: relative;
-40:     width: 940px;
-41:     height: 100vh;
-42:     padding: 80px 0;
-43:     @include tablet {
-44:         width: 550px;
-45:     }
-46: }
-47: 
-48: .slider-wrapper {
+7:     background: -moz-linear-gradient(#f9b43b 0%, #f9b43b 5%, #eb8d38 48%, #f9b43b 95%, #f9b43b 100%);
+8:     background: -o-linear-gradient(#f9b43b 0%, #f9b43b 5%, #eb8d38 48%, #f9b43b 95%, #f9b43b 100%);
+9:     background: linear-gradient(#f9b43b 0%, #f9b43b 30%, #eb8d38 48%, #eb8d38 58%, #f9b43b 95%, #f9b43b 100%);
+10:     /* Chrome10-25,Safari5.1-6 *\/
+11:     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *\/
+12:     @include tablet {
+13:         padding: 0;
+14:     }
+15:     @include phone {
+16:         justify-content: space-between;
+17:         padding: 0 10px;
 
 Backtrace:
-css/scss/burgers.scss:43:in `tablet'
-css/scss/burgers.scss:43
+css/scss/burgers.scss:12:in `tablet'
+css/scss/burgers.scss:12
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
@@ -69,4 +69,4 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'tablet'.\A         on line 43 of css/scss/burgers.scss, in `tablet'\A         from line 43 of css/scss/burgers.scss\A \A 38:     align-items: center;\A 39:     position: relative;\A 40:     width: 940px;\A 41:     height: 100vh;\A 42:     padding: 80px 0;\A 43:     @include tablet {\A 44:         width: 550px;\A 45:     }\A 46: }\A 47: \A 48: .slider-wrapper {"; }
+  content: "Error: Undefined mixin 'tablet'.\A         on line 12 of css/scss/burgers.scss, in `tablet'\A         from line 12 of css/scss/burgers.scss\A \A 7:     background: -moz-linear-gradient(#f9b43b 0%, #f9b43b 5%, #eb8d38 48%, #f9b43b 95%, #f9b43b 100%);\A 8:     background: -o-linear-gradient(#f9b43b 0%, #f9b43b 5%, #eb8d38 48%, #f9b43b 95%, #f9b43b 100%);\A 9:     background: linear-gradient(#f9b43b 0%, #f9b43b 30%, #eb8d38 48%, #eb8d38 58%, #f9b43b 95%, #f9b43b 100%);\A 10:     /* Chrome10-25,Safari5.1-6 */\A 11:     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */\A 12:     @include tablet {\A 13:         padding: 0;\A 14:     }\A 15:     @include phone {\A 16:         justify-content: space-between;\A 17:         padding: 0 10px;"; }

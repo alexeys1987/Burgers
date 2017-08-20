@@ -20,31 +20,34 @@ $(document).ready(function() {
         }
     });
     // Animated menu section
-    $('.menu .menu-acco .menu-acco__desc').removeClass('menu-acco__desc-wrapper--show');
+    var docWidth = $(document).width();
+    var menuAllHeaderWidth = $('.menu-acco').width();
+    var menuDescWidth = docWidth - menuAllHeaderWidth < 540 ? docWidth - menuAllHeaderWidth : 540;
+    $('.menu-acco__desc').css("width", menuDescWidth);
+
+    var allElemShow = $('.menu').find('.menu-acco__desc-wrapper');
+
+    allElemShow.removeClass('menu-acco__desc-wrapper--show');
     $('.menu-title').on('click', function(e) {
-        var allElemShow = $(e.currentTarget).closest('.menu').find('.menu-acco__desc-wrapper');
         // allElemShow.animate({
         //     'width': '0'
         // }, 300, "linear");
-        allElemShow.removeClass('menu-acco__desc-wrapper--show');
+        allElemShow.css("width", 0)
     });
     $('.menu-title-wrapper').on('click', function(e) {
-        var allElemShow = $(e.currentTarget).closest('.menu').find('.menu-acco__desc-wrapper');
         // allElemShow.animate({
         //     'width': '0'
         // }, 300, "linear");
-        allElemShow.removeClass('menu-acco__desc-wrapper--show');
+        allElemShow.css("width", 0);
     });
     $('.menu .menu-acco .menu-acco__link').on('click', function(e) {
         e.preventDefault();
         var elemShow = $(e.currentTarget).find('.menu-acco__desc-wrapper').hasClass('menu-acco__desc-wrapper--show');
-        console.log(elemShow);
         if (elemShow === true) {
-            var allElemShow = $(e.currentTarget).find('.menu-acco__desc-wrapper');
             // allElemShow.animate({
             //     'width': '0'
             // }, 300, "linear");
-            allElemShow.removeClass('menu-acco__desc-wrapper--show');
+            allElemShow.css("width", "0").removeClass('menu-acco__desc-wrapper--show');
         } else {
             var lastElemShow = $(e.currentTarget).closest('.menu-acco').find('.menu-acco__desc-wrapper--show');
             var nowElemShow = $(e.currentTarget).find('.menu-acco__desc-wrapper');
@@ -54,8 +57,8 @@ $(document).ready(function() {
             // lastElemShow.animate({
             //     'width': '0'
             // }, 300, "linear");
-            lastElemShow.removeClass('menu-acco__desc-wrapper--show');
-            nowElemShow.addClass('menu-acco__desc-wrapper--show');
+            lastElemShow.css("width", "0").removeClass('menu-acco__desc-wrapper--show');
+            nowElemShow.css("width", menuDescWidth).addClass('menu-acco__desc-wrapper--show');
         }
     });
 
