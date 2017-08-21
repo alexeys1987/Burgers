@@ -1507,7 +1507,8 @@ a:hover {
       justify-content: center; } }
 
 .form-order__submit-text {
-  margin: 0 0 0 22px; }
+  margin: 0 0 0 22px;
+  color: white; }
   @media screen and (max-width: 480px) {
     .form-order__submit-text {
       margin: 0 7px 0 21px; } }

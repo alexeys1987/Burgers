@@ -439,10 +439,8 @@
             </ul>
             <div class="feeds-popup">
                 <div class="feeds-popup__window">
-                    <h2 class="feeds-popup__header">Константин Спилберг</h2>
-                    <p class="feeds-popup__text">
-                        Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлета такой сочной, а сыр таким расплавленным.
-                    </p>
+                    <h2 class="feeds-popup__header"></h2>
+                    <p class="feeds-popup__text"></p>
                     <div class="feeds-popup__button"></div>
                 </div>
             </div>
@@ -452,49 +450,49 @@
                 <h1 class="title-section title-section--orange-center">
                     закажите доставку
                 </h1>
-                <form class="form-order">
+                <form action="server.php" method="post" class="form-order">
                     <div class="form-order__row form-order__row--left">
                         <label class="form-order__name-label form-order__name-label--half">
                             <div class="form-order__name">
                                 Имя
                             </div>
-                            <input type="text" class="form-order__name-input">
+                            <input type="text" name="name" class="form-order__name-input">
                         </label>
                         <label class="form-order__name-label form-order__name-label--half">
                             <div class="form-order__name">
                                 Телефон
                             </div>
-                            <input type="text" class="form-order__name-input">
+                            <input type="text" name="telephone" class="form-order__name-input">
                         </label>
                         <label class="form-order__name-label form-order__name-label--full">
                             <div class="form-order__name">
                                 Улица
                             </div>
-                            <input type="text" class="form-order__name-input">
+                            <input type="text" name="street" class="form-order__name-input">
                         </label>
                         <label class="form-order__name-label form-order__name-label--quarter">
                             <div class="form-order__name">
                                 Дом
                             </div>
-                            <input type="text" class="form-order__name-input">
+                            <input type="text" name="house" class="form-order__name-input">
                         </label>
                         <label class="form-order__name-label form-order__name-label--quarter">
                             <div class="form-order__name">
                                 Корпус
                             </div>
-                            <input type="text" class="form-order__name-input">
+                            <input type="text" name="build" class="form-order__name-input">
                         </label>
                         <label class="form-order__name-label form-order__name-label--quarter">
                             <div class="form-order__name">
                                 Квартира
                             </div>
-                            <input type="text" class="form-order__name-input">
+                            <input type="text" name="apartment" class="form-order__name-input">
                         </label>
                         <label class="form-order__name-label form-order__name-label--quarter form-order__name-label--mobile-hide">
                             <div class="form-order__name">
                                 Этаж
                             </div>
-                            <input type="text" class="form-order__name-input">
+                            <input type="text" name="floor" class="form-order__name-input">
                         </label>
                     </div>
                     <div class="form-order__row form-order__row--right">
@@ -502,16 +500,16 @@
                             <div class="form-order__name-textarea">
                                 Комментарий
                             </div>
-                            <textarea class="form-order__textarea"></textarea>
+                            <textarea name="comment" class="form-order__textarea"></textarea>
                         </label>
                         <div class="form-order__controls-radio">
                             <label class="form-order__radio">
-                                <input type="radio" name="money" class="elem-hide" checked>
+                                <input type="radio" name="money" class="elem-hide" value="yes" checked>
                                 <div class="form-order__radio-fake"></div>
                                 <div class="form-order__radio-text">Потребуется сдача</div>
                             </label>
                             <label class="form-order__radio">
-                                <input type="radio" name="money" class="elem-hide">
+                                <input type="radio" name="money" value="no" class="elem-hide">
                                 <div class="form-order__radio-fake"></div>
                                 <div class="form-order__radio-text">Оплата по карте</div>
                             </label>
@@ -524,7 +522,7 @@
                             </label>
                         </div>
                         <div class="form-order__controls-buttons">
-                            <a href="#" class="buttom-order">
+                            <a href="#" class="buttom-order form-order__buttom-order">
                                 заказать
                             </a>
                             <a href="#" class="form-order__submit-text">
@@ -538,7 +536,7 @@
                         <span class="popup-order__name">
                             Сообщение отправлено
                         </span>
-                        <a href="#" class="buttom-order">
+                        <a href="#" class="buttom-order popup-order__buttom-order">
                             закрыть
                         </a>
                     </div>
