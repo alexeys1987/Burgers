@@ -109,7 +109,14 @@ a:hover {
   font-family: 'Conv_Ubuntu-Medium';
   font-size: 13px;
   text-transform: uppercase;
-  color: white; }
+  color: white;
+  -webkit-transition: all .7s ease-in-out;
+  -moz-transition: all .7s ease-in-out;
+  -o-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out; }
+
+.buttom-order:hover {
+  background-color: #BA2A0A; }
 
 .buttom-order:active,
 .buttom-order:link,
@@ -572,6 +579,7 @@ a:hover {
 
 .conposition-desc {
   z-index: 100;
+  opacity: 0;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -580,7 +588,11 @@ a:hover {
   margin: 10px 0 0 93px;
   padding: 17px 20px 10px 22px;
   border-radius: 3px;
-  background-color: rgba(255, 255, 255, 0.9); }
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-transition: all .7s ease-in-out;
+  -moz-transition: all .7s ease-in-out;
+  -o-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out; }
   @media screen and (max-width: 768px) {
     .conposition-desc {
       margin: 0 0 0 90px; } }
@@ -667,21 +679,45 @@ a:hover {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
-  width: 100%; }
+  position: relative;
+  flex-shrink: 0;
+  width: 95%; }
+
+.slider__wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  transform: translateX(0vw);
+  -webkit-transition: all .7s ease-in-out;
+  -moz-transition: all .7s ease-in-out;
+  -o-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out; }
 
 .slider-content {
   display: flex;
   flex-flow: row nowrap;
-  position: relative;
-  width: 100vw; }
+  flex-shrink: 0;
+  position: absolute;
+  width: 100%; }
   @media screen and (max-width: 768px) {
     .slider-content {
       flex-direction: column;
       align-items: center;
       padding: 0 0; } }
+  .slider-content:nth-child(2) {
+    margin-left: 100vw; }
+  .slider-content:nth-child(3) {
+    margin-left: 200vw; }
+  .slider-content:nth-child(4) {
+    margin-left: 300vw; }
+
+.slider-content--relative {
+  position: relative; }
 
 .slider__left {
-  flex-shrink: 0;
+  flex-shrink: 1;
   width: 460px;
   height: 330px;
   margin: 80px 25px 0 0; }
@@ -1551,11 +1587,9 @@ a:hover {
   display: flex;
   flex-flow: column nowrap; }
 
-.map {
+.contact__map {
   flex: 1 0 auto;
-  width: 100%;
-  background: url("../img/map/map.jpg") center center no-repeat;
-  background-size: cover; }
+  width: 100%; }
 
 .wrapper-footer {
   flex: 0 0 auto;

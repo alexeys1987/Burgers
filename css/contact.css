@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'phone'.
-        on line 22 of css/scss/contact.scss, in `phone'
-        from line 22 of css/scss/contact.scss
+        on line 20 of css/scss/contact.scss, in `phone'
+        from line 20 of css/scss/contact.scss
 
-17:     justify-content: center;
-18:     width: 100%;
-19:     height: 58px;
-20:     background: url('../img/map/map_footer.jpg') no-repeat;
-21:     background-size: cover;
-22:     @include phone {
-23:         height: 106px;
-24:     }
-25: }
-26: 
-27: .footer {
+15:     justify-content: center;
+16:     width: 100%;
+17:     height: 58px;
+18:     background: url('../img/map/map_footer.jpg') no-repeat;
+19:     background-size: cover;
+20:     @include phone {
+21:         height: 106px;
+22:     }
+23: }
+24: 
+25: .footer {
 
 Backtrace:
-css/scss/contact.scss:22:in `phone'
-css/scss/contact.scss:22
+css/scss/contact.scss:20:in `phone'
+css/scss/contact.scss:20
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
@@ -69,4 +69,4 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'phone'.\A         on line 22 of css/scss/contact.scss, in `phone'\A         from line 22 of css/scss/contact.scss\A \A 17:     justify-content: center;\A 18:     width: 100%;\A 19:     height: 58px;\A 20:     background: url('../img/map/map_footer.jpg') no-repeat;\A 21:     background-size: cover;\A 22:     @include phone {\A 23:         height: 106px;\A 24:     }\A 25: }\A 26: \A 27: .footer {"; }
+  content: "Error: Undefined mixin 'phone'.\A         on line 20 of css/scss/contact.scss, in `phone'\A         from line 20 of css/scss/contact.scss\A \A 15:     justify-content: center;\A 16:     width: 100%;\A 17:     height: 58px;\A 18:     background: url('../img/map/map_footer.jpg') no-repeat;\A 19:     background-size: cover;\A 20:     @include phone {\A 21:         height: 106px;\A 22:     }\A 23: }\A 24: \A 25: .footer {"; }

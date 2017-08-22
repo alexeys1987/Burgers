@@ -5,6 +5,49 @@ $(document).ready(function() {
     var moveElem = $('.wrapper');
     var fixedMenu = $('.menu-radio-fixed__link');
     fixedMenu.eq(currentSection).addClass('menu-radio-fixed__link-active');
+    var currentSliderBurgersPage = 0;
+    var numberSliderBurgersPage = ($('.burgers').find('.slider-content').length - 1);
+    var moveSliderBurgers = $('.burgers .slider__wrapper');
+
+    // Yandex map
+    ymaps.ready(init);
+    var myMap;
+
+    function init() {
+        myMap = new ymaps.Map("map", {
+            center: [59.936682, 30.311120],
+            zoom: 11,
+            controls: [],
+        });
+        myMap.behaviors.disable('scrollZoom');
+
+        // var myPlacemark1 = new ymaps.Placemark([59.936682, 30.311120], {}, {
+        //     iconLayout: 'default#image',
+        //     iconImageHref: 'img/icon/map-marker.svg',
+        //     iconImageSize: [46, 57],
+        //     iconImageOffset: [-26, -52]
+        // });
+        // myMap.geoObjects.add(myPlacemark1);
+
+        var coords = [
+                [59.973687, 30.311971],
+                [59.888904, 30.313729],
+                [59.915125, 30.491872],
+                [59.946744, 30.382181]
+            ],
+            myCollection = new ymaps.GeoObjectCollection({}, {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/icon/map-marker.svg',
+                iconImageSize: [46, 57],
+                iconImageOffset: [-26, -52]
+            });
+
+        for (var i = 0; i < coords.length; i++) {
+            myCollection.add(new ymaps.Placemark(coords[i]));
+        }
+
+        myMap.geoObjects.add(myCollection);
+    }
 
     // Clear order form
     $('.form-order__submit-text').on('click', function(e) {
@@ -173,6 +216,7 @@ $(document).ready(function() {
             $(e.target).closest('.team-list__link').addClass('team-list__link--show').find('.team-list__decs').slideDown();
         }
     });
+
     // Animated menu section
     var docWidth = $('.menu-title-wrapper').width();
     var menuAllHeaderWidth = $('.menu-acco').width();
@@ -203,5 +247,58 @@ $(document).ready(function() {
             nowElemShow.css("width", menuDescWidth).addClass('menu-acco__desc-wrapper--show');
         }
     });
+
+    // Animated burgers-slider section
+    $('.conposition-menu').on('mouseenter', function(e) {
+        e.preventDefault();
+        $('.conposition-desc').css({
+            'opacity': '1'
+        })
+    });
+    $('.conposition-menu').on('mouseleave', function(e) {
+        e.preventDefault();
+        $('.conposition-desc').css({
+            'opacity': '0'
+        })
+    });
+
+    $('.burgers').find('.slider-content').eq(0).addClass('slider-content--relative');
+    // for (var i = 1; i <= numberSliderBurgersPage; i++) {
+
+    //         $('.burgers').find('.slider-content:nth-child(' + i + ')').css({
+    //             'margin-left': (i * 100) + 'vw)',
+    //         });
+
+    //         console.log('margin-left' + (i * 100) + 'vw)');
+
+    // }
+
+    $('.arrow-scroll--rotate-minus90').on('click', function(e) {
+        e.preventDefault();
+        if (currentSliderBurgersPage >= numberSliderBurgersPage) return;
+        currentSliderBurgersPage++;
+
+        moveSliderBurgers.css({
+            'transform': 'translateX(' + (currentSliderBurgersPage * -100) + 'vw)',
+            '-webkit-transform': 'translateX(' + (currentSliderBurgersPage * -100) + 'vw)'
+        }).find('.slider-content').eq(currentSliderBurgersPage).addClass('slider-content--active').siblings().removeClass('slider-content--active');
+
+    });
+    $('.arrow-scroll--rotate-plus90').on('click', function(e) {
+        e.preventDefault();
+        if (currentSliderBurgersPage <= 0) return;
+        currentSliderBurgersPage--;
+
+        moveSliderBurgers.css({
+            'transform': 'translateX(' + (currentSliderBurgersPage * -100) + 'vw)',
+            '-webkit-transform': 'translateX(' + (currentSliderBurgersPage * -100) + 'vw)'
+        }).find('.slider-content').eq(currentSliderBurgersPage).addClass('slider-content--active').siblings().removeClass('slider-content--active');
+
+    });
+
+    // var currentSliderBurgersPage = 0;
+    // var numberSliderBurgersPage = ($('.burgers').find('.slider-content').length - 1);
+    // var moveSliderBurgers = $('.burgers .slider__wrapper');
+
 
 });

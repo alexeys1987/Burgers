@@ -125,6 +125,14 @@ a:hover {
     font-size: 13px;
     text-transform: uppercase;
     color: white;
+    -webkit-transition: all .7s ease-in-out;
+    -moz-transition: all .7s ease-in-out;
+    -o-transition: all .7s ease-in-out;
+    transition: all .7s ease-in-out;
+}
+
+.buttom-order:hover {
+    background-color: #BA2A0A;
 }
 
 .buttom-order:active,
