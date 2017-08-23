@@ -191,12 +191,30 @@ $(document).ready(function() {
         setTimeout(function() { scrollEnable = true }, 1500);
     });
 
-    // Animated scroll page on touch
+    // Animated scroll page on keyDown
+    $(document).on('keydown', function(e) {
+        console.log(e.originalEvent.keyCode);
+        if (e.originalEvent.keyCode == 40) {
+            if (currentSection < numberSection) currentSection++;
+            moveElem.css({
+                'transform': 'translateY(' + (currentSection * -100) + 'vh)',
+                '-webkit-transform': 'translateY(' + (currentSection * -100) + 'vh)'
+            });
+        }
+        if (e.originalEvent.keyCode == 38) {
+            if (currentSection > 0) currentSection--;
+            moveElem.css({
+                'transform': 'translateY(' + (currentSection * -100) + 'vh)',
+                '-webkit-transform': 'translateY(' + (currentSection * -100) + 'vh)'
+            });
+        }
 
+    });
+
+    // Animated scroll page on touch
     $(document).on('touchstart', function(e) {
         currentTouchPointY = e.originalEvent.changedTouches[0].screenY;
     });
-
     $(document).on('touchend', function(e) {
         if ((currentTouchPointY - e.originalEvent.changedTouches[0].screenY) > 10) {
             if (currentSection < numberSection) currentSection++;
@@ -212,7 +230,6 @@ $(document).ready(function() {
                 '-webkit-transform': 'translateY(' + (currentSection * -100) + 'vh)'
             });
         }
-
     });
 
     // Animated intro section
@@ -314,6 +331,27 @@ $(document).ready(function() {
             '-webkit-transform': 'translateX(' + (currentSliderBurgersPage * -100) + 'vw)'
         }).find('.slider-content').eq(currentSliderBurgersPage).addClass('slider-content--active').siblings().removeClass('slider-content--active');
 
+    });
+
+    // Animated burgers-slider section from keydown
+    $(document).on('keydown', function(e) {
+        if (currentSection != 2) return
+        if (e.originalEvent.keyCode == 37) {
+            if (currentSliderBurgersPage >= numberSliderBurgersPage) return;
+            currentSliderBurgersPage++;
+            moveSliderBurgers.css({
+                'transform': 'translateX(' + (currentSliderBurgersPage * -100) + 'vw)',
+                '-webkit-transform': 'translateX(' + (currentSliderBurgersPage * -100) + 'vw)'
+            }).find('.slider-content').eq(currentSliderBurgersPage).addClass('slider-content--active').siblings().removeClass('slider-content--active');
+        }
+        if (e.originalEvent.keyCode == 39) {
+            if (currentSliderBurgersPage <= 0) return;
+            currentSliderBurgersPage--;
+            moveSliderBurgers.css({
+                'transform': 'translateX(' + (currentSliderBurgersPage * -100) + 'vw)',
+                '-webkit-transform': 'translateX(' + (currentSliderBurgersPage * -100) + 'vw)'
+            }).find('.slider-content').eq(currentSliderBurgersPage).addClass('slider-content--active').siblings().removeClass('slider-content--active');
+        }
     });
 
     // var currentSliderBurgersPage = 0;
