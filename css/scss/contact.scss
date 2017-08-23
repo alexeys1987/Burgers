@@ -83,16 +83,8 @@
     }
 }
 
-.footer__social {
-    width: 20px;
-    height: 20px;
+.footer__link {
     margin-right: 20px;
-    opacity: .3;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    fill: white;
     @include tablet {
         margin-right: 18px;
     }
@@ -102,6 +94,17 @@
     &:last-child {
         margin-right: 0;
     }
+}
+
+.footer__social {
+    width: 20px;
+    height: 20px;
+    opacity: .3;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    fill: white;
 }
 
 .footer__social:hover {

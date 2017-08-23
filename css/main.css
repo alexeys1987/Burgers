@@ -1229,6 +1229,7 @@ a:hover {
 .feeds-popup__window {
   position: relative;
   width: 90%;
+  max-width: 940px;
   padding: 29px 19px;
   border-radius: 3px;
   background: white; }
@@ -1660,24 +1661,26 @@ a:hover {
       margin: 0 0 19px 0;
       text-align: center; } }
 
+.footer__link {
+  margin-right: 20px; }
+  @media screen and (max-width: 768px) {
+    .footer__link {
+      margin-right: 18px; } }
+  @media screen and (max-width: 480px) {
+    .footer__link {
+      margin-right: 21px; } }
+  .footer__link:last-child {
+    margin-right: 0; }
+
 .footer__social {
   width: 20px;
   height: 20px;
-  margin-right: 20px;
   opacity: .3;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   fill: white; }
-  @media screen and (max-width: 768px) {
-    .footer__social {
-      margin-right: 18px; } }
-  @media screen and (max-width: 480px) {
-    .footer__social {
-      margin-right: 21px; } }
-  .footer__social:last-child {
-    margin-right: 0; }
 
 .footer__social:hover {
   opacity: 1; }

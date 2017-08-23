@@ -8,6 +8,7 @@ $(document).ready(function() {
     var currentSliderBurgersPage = 0;
     var numberSliderBurgersPage = ($('.burgers').find('.slider-content').length - 1);
     var moveSliderBurgers = $('.burgers .slider__wrapper');
+    var currentTouchPointY
 
     // Yandex map
     ymaps.ready(init);
@@ -20,14 +21,8 @@ $(document).ready(function() {
             controls: [],
         });
         myMap.behaviors.disable('scrollZoom');
-
-        // var myPlacemark1 = new ymaps.Placemark([59.936682, 30.311120], {}, {
-        //     iconLayout: 'default#image',
-        //     iconImageHref: 'img/icon/map-marker.svg',
-        //     iconImageSize: [46, 57],
-        //     iconImageOffset: [-26, -52]
-        // });
-        // myMap.geoObjects.add(myPlacemark1);
+        myMap.behaviors.disable('drag');
+        myMap.behaviors.disable('multiTouch');
 
         var coords = [
                 [59.973687, 30.311971],
@@ -47,6 +42,7 @@ $(document).ready(function() {
         }
 
         myMap.geoObjects.add(myCollection);
+
     }
 
     // Clear order form
@@ -193,6 +189,30 @@ $(document).ready(function() {
         fixedMenu.eq(currentSection).addClass('menu-radio-fixed__link-active').siblings().removeClass('menu-radio-fixed__link-active');
         scrollEnable = false;
         setTimeout(function() { scrollEnable = true }, 1500);
+    });
+
+    // Animated scroll page on touch
+
+    $(document).on('touchstart', function(e) {
+        currentTouchPointY = e.originalEvent.changedTouches[0].screenY;
+    });
+
+    $(document).on('touchend', function(e) {
+        if ((currentTouchPointY - e.originalEvent.changedTouches[0].screenY) > 10) {
+            if (currentSection < numberSection) currentSection++;
+            moveElem.css({
+                'transform': 'translateY(' + (currentSection * -100) + 'vh)',
+                '-webkit-transform': 'translateY(' + (currentSection * -100) + 'vh)'
+            });
+        }
+        if ((currentTouchPointY - e.originalEvent.changedTouches[0].screenY) < -10) {
+            if (currentSection > 0) currentSection--;
+            moveElem.css({
+                'transform': 'translateY(' + (currentSection * -100) + 'vh)',
+                '-webkit-transform': 'translateY(' + (currentSection * -100) + 'vh)'
+            });
+        }
+
     });
 
     // Animated intro section
