@@ -193,7 +193,7 @@ $(document).ready(function() {
 
     // Animated scroll page on keyDown
     $(document).on('keydown', function(e) {
-        console.log(e.originalEvent.keyCode);
+        if (!scrollEnable) return;
         if (e.originalEvent.keyCode == 40) {
             if (currentSection < numberSection) currentSection++;
             moveElem.css({
@@ -212,10 +212,20 @@ $(document).ready(function() {
     });
 
     // Animated scroll page on touch
+    $(document).on('touchcancel', function(e) {
+
+    });
     $(document).on('touchstart', function(e) {
+
+        if (!scrollEnable) return;
         currentTouchPointY = e.originalEvent.changedTouches[0].screenY;
     });
+    $(document).on('touchmove', function(e) {
+        e.preventDefault();
+    });
     $(document).on('touchend', function(e) {
+
+        if (!scrollEnable) return;
         if ((currentTouchPointY - e.originalEvent.changedTouches[0].screenY) > 10) {
             if (currentSection < numberSection) currentSection++;
             moveElem.css({
@@ -241,6 +251,7 @@ $(document).ready(function() {
         $(e.currentTarget).toggleClass('intro-top__menu-mobile--popup');
         scrollEnable == true ? scrollEnable = false : scrollEnable = true;
     });
+
     // Animated team section
     $('.team-list__link').not('.team-list__link--show').find('.team-list__decs').hide();
     $('.team-list__link').on('click', function(e) {
@@ -322,6 +333,29 @@ $(document).ready(function() {
 
     });
     $('.arrow-scroll--rotate-plus90').on('click', function(e) {
+        e.preventDefault();
+        if (currentSliderBurgersPage <= 0) return;
+        currentSliderBurgersPage--;
+
+        moveSliderBurgers.css({
+            'transform': 'translateX(' + (currentSliderBurgersPage * -100) + 'vw)',
+            '-webkit-transform': 'translateX(' + (currentSliderBurgersPage * -100) + 'vw)'
+        }).find('.slider-content').eq(currentSliderBurgersPage).addClass('slider-content--active').siblings().removeClass('slider-content--active');
+
+    });
+
+    $('.arrow-scroll--rotate-minus90').on('touchstart', function(e) {
+        e.preventDefault();
+        if (currentSliderBurgersPage >= numberSliderBurgersPage) return;
+        currentSliderBurgersPage++;
+
+        moveSliderBurgers.css({
+            'transform': 'translateX(' + (currentSliderBurgersPage * -100) + 'vw)',
+            '-webkit-transform': 'translateX(' + (currentSliderBurgersPage * -100) + 'vw)'
+        }).find('.slider-content').eq(currentSliderBurgersPage).addClass('slider-content--active').siblings().removeClass('slider-content--active');
+
+    });
+    $('.arrow-scroll--rotate-plus90').on('touchstart', function(e) {
         e.preventDefault();
         if (currentSliderBurgersPage <= 0) return;
         currentSliderBurgersPage--;

@@ -12,15 +12,17 @@
     justify-content: space-between;
     position: relative;
     width: 100%;
-    max-width: 945px;
+    max-width: 995px;
     height: 100vh;
     min-height: 645px;
-    padding: 12px 0;
+    padding: 12px 20px 12px 30px;
     @include tablet {
         width: 100%;
+        min-height: 445px;
         padding: 12px 20px 12px 30px;
     }
     @include phone {
+        min-height: 400px;
         padding: 12px 20px 12px 20px;
     }
 }
@@ -186,7 +188,9 @@
 .intro-middle {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    position: relative;
+    width: 100%;
     @include tablet {
         flex-flow: column nowrap;
         justify-content: flex-start;
@@ -195,14 +199,17 @@
 }
 
 .intro-middle__img {
-    margin: 45px 0 0 20px;
+    width: 48%;
+    margin: 12% 0 0 20px;
     @include tablet {
-        width: 450px;
-        margin: 83px 0 0 8px;
+        width: auto;
+        height: 35vh;
+        margin: 0 0 0 8px;
     }
     @include phone {
-        width: 370px;
-        margin: 70px 0 44px 2px;
+        width: auto;
+        height: 35vh;
+        margin: 0 0 44px 2px;
     }
 }
 
@@ -213,6 +220,9 @@
     margin: 115px 45px 0 0;
     vertical-align: top;
     text-align: left;
+    @include laptop {
+        margin: 115px 45px 0 18px;
+    }
     @include tablet {
         margin: 18px 0 0 0;
         text-align: center;
@@ -222,6 +232,9 @@
 .title-section--orange {
     margin: 0 0 0 0;
     color: #f9b43b;
+    @include laptop {
+        font-size: 65px;
+    }
 }
 
 .intro-middle__text-bottom {
@@ -234,10 +247,14 @@
     font-size: 65px;
     line-height: 60px;
     color: white;
+    @include laptop {
+        font-size: 56px;
+    }
     @include tablet {}
     @include phone {
         margin: 4px 0 0 0;
-        font-size: 54px;
+        font-size: 14vw;
+        line-height: 118%;
     }
 }
 
@@ -247,7 +264,7 @@
     align-items: flex-end;
     margin: 90px 0 25px 0;
     @include phone {
-        margin: 99px 0 18px 0;
+        margin: 13vh 0 18px 0;
     }
 }
 

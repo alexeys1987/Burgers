@@ -18,7 +18,7 @@
         text-align: center;
     }
     @include phone {
-        padding: 54px 0 0 0;
+        padding: 4vh 0 0 0;
     }
 }
 
@@ -35,7 +35,7 @@
             margin-top: 120px;
         }
         @include phone {
-            margin-top: 90px;
+            margin-top: 4vh;
         }
     }
     color: white;
@@ -45,7 +45,7 @@
         margin-bottom: 31px;
     }
     @include phone {
-        margin-bottom: 29px;
+        margin-bottom: 3vh;
     }
 }
 
@@ -53,6 +53,9 @@
     margin-bottom: 42px;
     @include tablet {
         margin-bottom: 30px;
+    }
+    @include phone {
+        margin-bottom: 3vh;
     }
 }
 
@@ -127,6 +130,9 @@
         align-self: center;
         margin: 0 0 20px 0;
     }
+    @include phone {
+        margin: 0 0 2vh 0;
+    }
 }
 
 .team-list__prof-wrapper {
@@ -142,6 +148,9 @@
         margin-bottom: 13px;
         text-align: center;
     }
+    @include phone {
+        margin: 0 0 2vh 0;
+    }
 }
 
 .team-list__prof-desc {
@@ -154,5 +163,8 @@
         width: 400px;
         text-align: center;
         color: #f5f5f5;
+    }
+    @include phone {
+        width: 100%;
     }
 }
